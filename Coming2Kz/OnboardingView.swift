@@ -13,38 +13,52 @@ struct OnboardingView: View {
     var body: some View {
         ZStack {
             RiveViewModel(fileName: "shapes").view()
-            .ignoresSafeArea()
-            .blur(radius: 30)
-            .background(
-             Image("Spline")
-              .blur(radius: 50)
-              .offset(x:200, y: 100)
-        )
-            
-            button.view()
-                .frame(width: 236, height: 64)
-                .overlay(
-                Label("Start Chat", systemImage: "arrow.forward")
-                    .offset(x: 4, y: 4)
-                    .font(.headline)
-                )
+                .ignoresSafeArea()
+                .blur(radius: 30)
                 .background(
-                    Color.black
-                        .cornerRadius(30)
-                        .blur(radius: 10)
-                        .opacity(0.3)
-                        .offset(y: 10)
+                    Image("Spline")
+                        .blur(radius: 50)
+                        .offset(x:200, y: 100)
                 )
-                .onTapGesture {
-                    button.play(animationName: "active")
+            
+            VStack(alignment: .leading ) {
+                Text("Welcome to Chat")
+                    .customFont(.title)
+                    .frame(width: 260, alignment: .leading)
+                    .padding(.bottom,10)
+                
+                Text("Chat with fellow foreigners in Kazakhstan, ask questions and find answers that you need, have fun while at it.")
+                    .customFont(.body)
+                    .opacity(0.7)
+                    .frame(maxWidth:.infinity,alignment: .leading)
+                Spacer()
+                
+                Button {
+                    
+                } label: {
+                    ZStack{
+                        Rectangle()
+                            .frame(width: 236, height: 64)
+                            .foregroundColor(.white)
+                            .cornerRadius(25)
+                            .shadow(radius: 5)
+                        HStack{
+                            Image(systemName: "arrow.forward")
+                            Text("Start Chat")
+                                .font(.headline)
+                                .foregroundColor(.black)
+                        }
+                    }
                 }
+                Text("Be polite and mindfull of chat rules, respect other people opinion as you make yours")
+                    .customFont(.footnote)
+                    .opacity(0.7)
+            }
+            .padding(40)
+            .padding(.top,40)
         }
-        
-    
-        
     }
 }
-
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingView()

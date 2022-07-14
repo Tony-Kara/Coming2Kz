@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F78F9A428803A8500D27FDF /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F78F9A128803A8500D27FDF /* Inter-Regular.ttf */; };
+		7F78F9A528803A8500D27FDF /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F78F9A228803A8500D27FDF /* Poppins-Bold.ttf */; };
+		7F78F9A628803A8500D27FDF /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */; };
+		7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78F9A928803DA200D27FDF /* CustomFonts.swift */; };
 		CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */; };
 		CEE07F3D287D9840008B6C62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F3C287D9840008B6C62 /* ContentView.swift */; };
 		CEE07F3F287D9848008B6C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE07F3E287D9848008B6C62 /* Assets.xcassets */; };
@@ -23,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F78F9A128803A8500D27FDF /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		7F78F9A228803A8500D27FDF /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		7F78F9A728803B5F00D27FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7F78F9A928803DA200D27FDF /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		CEE07F37287D9840008B6C62 /* Coming2Kz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coming2Kz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coming2KzApp.swift; sourceTree = "<group>"; };
 		CEE07F3C287D9840008B6C62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +59,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F78F9A028803A8500D27FDF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7F78F9A128803A8500D27FDF /* Inter-Regular.ttf */,
+				7F78F9A228803A8500D27FDF /* Poppins-Bold.ttf */,
+				7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7F78F9A828803D6E00D27FDF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7F78F9A928803DA200D27FDF /* CustomFonts.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		CEE07F2E287D9840008B6C62 = {
 			isa = PBXGroup;
 			children = (
@@ -69,10 +96,13 @@
 		CEE07F39287D9840008B6C62 /* Coming2Kz */ = {
 			isa = PBXGroup;
 			children = (
+				7F78F9A828803D6E00D27FDF /* Helpers */,
+				7F78F9A728803B5F00D27FDF /* Info.plist */,
 				CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */,
 				CEE07F3C287D9840008B6C62 /* ContentView.swift */,
 				CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */,
 				CEE07F3E287D9848008B6C62 /* Assets.xcassets */,
+				7F78F9A028803A8500D27FDF /* Fonts */,
 				CEE07F48287D9B90008B6C62 /* RiveAssets */,
 				CEE07F40287D9848008B6C62 /* Preview Content */,
 			);
@@ -165,12 +195,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F78F9A628803A8500D27FDF /* Inter-SemiBold.ttf in Resources */,
 				CEE07F54287D9B91008B6C62 /* shapes.riv in Resources */,
 				CEE07F52287D9B91008B6C62 /* check.riv in Resources */,
 				CEE07F42287D9848008B6C62 /* Preview Assets.xcassets in Resources */,
 				CEE07F53287D9B91008B6C62 /* menu_button.riv in Resources */,
 				CEE07F50287D9B91008B6C62 /* house.riv in Resources */,
 				CEE07F55287D9B91008B6C62 /* button.riv in Resources */,
+				7F78F9A428803A8500D27FDF /* Inter-Regular.ttf in Resources */,
+				7F78F9A528803A8500D27FDF /* Poppins-Bold.ttf in Resources */,
 				CEE07F3F287D9848008B6C62 /* Assets.xcassets in Resources */,
 				CEE07F51287D9B91008B6C62 /* confetti.riv in Resources */,
 				CEE07F56287D9B91008B6C62 /* icons.riv in Resources */,
@@ -185,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE07F5B287D9D01008B6C62 /* OnboardingView.swift in Sources */,
+				7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */,
 				CEE07F3D287D9840008B6C62 /* ContentView.swift in Sources */,
 				CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */,
 			);
@@ -320,11 +354,13 @@
 				DEVELOPMENT_TEAM = WT77VV47BZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coming2Kz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,11 +385,13 @@
 				DEVELOPMENT_TEAM = WT77VV47BZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Coming2Kz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
