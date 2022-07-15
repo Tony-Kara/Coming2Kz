@@ -11,7 +11,7 @@ import SwiftUI
 struct Coming2KzApp: App {
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            TabBar()
         }
     }
 }
