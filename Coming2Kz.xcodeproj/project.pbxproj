@@ -24,13 +24,13 @@
 		CEE07F56287D9B91008B6C62 /* icons.riv in Resources */ = {isa = PBXBuildFile; fileRef = CEE07F4F287D9B90008B6C62 /* icons.riv */; };
 		CEE07F59287D9CCA008B6C62 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CEE07F58287D9CCA008B6C62 /* RiveRuntime */; };
 		CEE07F5B287D9D01008B6C62 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */; };
+		CEE07F5D28816C1D008B6C62 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F5C28816C1D008B6C62 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F78F9A128803A8500D27FDF /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		7F78F9A228803A8500D27FDF /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
-		7F78F9A728803B5F00D27FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F78F9A928803DA200D27FDF /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		CEE07F37287D9840008B6C62 /* Coming2Kz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coming2Kz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coming2KzApp.swift; sourceTree = "<group>"; };
@@ -45,6 +45,7 @@
 		CEE07F4E287D9B90008B6C62 /* button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.riv; sourceTree = "<group>"; };
 		CEE07F4F287D9B90008B6C62 /* icons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.riv; sourceTree = "<group>"; };
 		CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		CEE07F5C28816C1D008B6C62 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				7F78F9A828803D6E00D27FDF /* Helpers */,
-				7F78F9A728803B5F00D27FDF /* Info.plist */,
 				CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */,
 				CEE07F3C287D9840008B6C62 /* ContentView.swift */,
+				CEE07F5C28816C1D008B6C62 /* TabBar.swift */,
 				CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */,
 				CEE07F3E287D9848008B6C62 /* Assets.xcassets */,
 				7F78F9A028803A8500D27FDF /* Fonts */,
@@ -221,6 +222,7 @@
 				7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */,
 				CEE07F3D287D9840008B6C62 /* ContentView.swift in Sources */,
 				CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */,
+				CEE07F5D28816C1D008B6C62 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
