@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F23E256288063C3007CAD1F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23E255288063C3007CAD1F /* CustomTextField.swift */; };
+		7F5FDCBD2880557800EDCB28 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5FDCBC2880557800EDCB28 /* SignInView.swift */; };
 		7F78F9A428803A8500D27FDF /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F78F9A128803A8500D27FDF /* Inter-Regular.ttf */; };
 		7F78F9A528803A8500D27FDF /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F78F9A228803A8500D27FDF /* Poppins-Bold.ttf */; };
 		7F78F9A628803A8500D27FDF /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F23E255288063C3007CAD1F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		7F5FDCBC2880557800EDCB28 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		7F78F9A128803A8500D27FDF /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		7F78F9A228803A8500D27FDF /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				7F78F9A928803DA200D27FDF /* CustomFonts.swift */,
+				7F23E255288063C3007CAD1F /* CustomTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 				7F78F9A828803D6E00D27FDF /* Helpers */,
 				7F78F9A728803B5F00D27FDF /* Info.plist */,
 				CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */,
+				7F5FDCBC2880557800EDCB28 /* SignInView.swift */,
 				CEE07F3C287D9840008B6C62 /* ContentView.swift */,
 				CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */,
 				CEE07F3E287D9848008B6C62 /* Assets.xcassets */,
@@ -219,8 +225,10 @@
 			files = (
 				CEE07F5B287D9D01008B6C62 /* OnboardingView.swift in Sources */,
 				7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */,
+				7F23E256288063C3007CAD1F /* CustomTextField.swift in Sources */,
 				CEE07F3D287D9840008B6C62 /* ContentView.swift in Sources */,
 				CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */,
+				7F5FDCBD2880557800EDCB28 /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +368,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,7 +399,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
