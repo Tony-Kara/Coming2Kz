@@ -25,7 +25,7 @@ struct OnboardingView: View {
                 Text("Welcome to Chat")
                     .customFont(.title)
                     .frame(width: 260, alignment: .leading)
-                    .padding(.bottom,10)
+                    .padding(.bottom,5)
                 
                 Text("Chat with fellow foreigners in Kazakhstan, ask questions and find answers that you need, have fun while at it.")
                     .customFont(.body)
