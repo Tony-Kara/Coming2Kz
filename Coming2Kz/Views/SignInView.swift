@@ -10,7 +10,7 @@ import SwiftUI
 struct SignInView: View {
     @State var phoneNumber = ""
     var body: some View {
-        if #available(iOS 15.0, *) {
+
             VStack(spacing:24){
                 Text("Verification")
                     .customFont(.largeTitle)
@@ -50,8 +50,9 @@ struct SignInView: View {
             .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(.linearGradient(colors: [.white.opacity(0.8),.white.opacity(0.1)], startPoint: .topLeading, endPoint: .bottomTrailing)))
             .padding()
             
-        }
-    }
+        
+    
+}
 }
 
 struct SignInView_Previews: PreviewProvider {
