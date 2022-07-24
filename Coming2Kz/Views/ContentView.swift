@@ -16,18 +16,28 @@ struct ContentView: View {
   
   var body: some View {
       ZStack {
-        switch selectedTab {
-        case .chat:
-          Text("Hello, world!")
-        case .search:
-          Text("Hello, world!")
-        case .timer:
-          Text("Hello, world!")
-        case .bell:
-          Text("Hello, world!")
-        case .user:
-          Text("Hello, world!")
+        
+        Group {
+          switch selectedTab {
+          case .chat:
+            HomeView()
+          case .search:
+            Text("Hello, world!")
+          case .timer:
+            Text("Hello, world!")
+          case .bell:
+            Text("Hello, world!")
+          case .user:
+            Text("Hello, world!")
+          }
         }
+        .safeAreaInset(edge: .bottom) {
+          Color.clear.frame(height:80)
+        }
+        .safeAreaInset(edge: .top) {
+          Color.clear.frame(height:100)
+        }
+        .ignoresSafeArea()
         
         button.view()
           .frame(width: 44, height: 44)
