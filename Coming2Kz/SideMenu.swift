@@ -9,7 +9,7 @@ import SwiftUI
 import RiveRuntime
 struct SideMenu: View {
     var body: some View {
-      _ = RiveViewModel(fileName:"icons", stateMachineName: "HOME_interactivity", artboardName: "HOME")
+
       VStack{
         HStack {
           Image(systemName: "person")
