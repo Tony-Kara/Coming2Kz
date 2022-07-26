@@ -112,12 +112,29 @@
 		CEAA2AB528859F9E00A25647 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CEE07F3C287D9840008B6C62 /* ContentView.swift */,
+				CEAA2AC0288AA79100A25647 /* HomeView.swift */,
 				7F5FDCBC2880557800EDCB28 /* SignInView.swift */,
 				CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */,
 				CEAA2ABC2886B72600A25647 /* Assets.xcassets */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CEAA2AC728902E9C00A25647 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		CEAA2AC828902EE200A25647 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CEE07F5C28816C1D008B6C62 /* TabBar.swift */,
+				CEE07F3C287D9840008B6C62 /* ContentView.swift */,
+				CEAA2AC2288D306200A25647 /* SideMenu.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		CEE07F2E287D9840008B6C62 = {
@@ -140,11 +157,10 @@
 			isa = PBXGroup;
 			children = (
 				CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */,
-				CEE07F5C28816C1D008B6C62 /* TabBar.swift */,
-				CEAA2ABE288A80CB00A25647 /* HCard.swift */,
-				CEAA2AC0288AA79100A25647 /* HomeView.swift */,
+				CEAA2AC828902EE200A25647 /* Navigation */,
+				CEAA2AC728902E9C00A25647 /* Components */,
 				CEAA2AC4288D635C00A25647 /* MenuRow.swift */,
-				CEAA2AC2288D306200A25647 /* SideMenu.swift */,
+				CEAA2ABE288A80CB00A25647 /* HCard.swift */,
 				CEAA2AB828869F3000A25647 /* VCard.swift */,
 				7F78F9A828803D6E00D27FDF /* Helpers */,
 				CEAA2AB028859F0600A25647 /* Model */,

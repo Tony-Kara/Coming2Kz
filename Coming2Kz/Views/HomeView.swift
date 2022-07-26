@@ -13,7 +13,7 @@ struct HomeView: View {
         Color("Background").ignoresSafeArea()
         ScrollView {
           VStack(alignment: .leading, spacing: 0) {
-            Text("Courses")
+            Text("Meet peeps")
               .customFont(.largeTitle)
               .frame(maxWidth:.infinity, alignment: .leading)
               .padding(.horizontal,20)
