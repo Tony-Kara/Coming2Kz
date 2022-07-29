@@ -107,19 +107,19 @@ struct MenuItem: Identifiable {
 }
 
 var menuItems = [
-    MenuItem(text: "Home", icon: RiveViewModel(fileName: "icons", stateMachineName: "HOME_interactivity", artboardName: "HOME"), menu: .home),
-    MenuItem(text: "Teacher's loudge", icon: RiveViewModel(fileName: "icons", stateMachineName: "SEARCH_Interactivity", artboardName: "SEARCH"), menu: .teacherLoudge),
-    MenuItem(text: "Favorites", icon: RiveViewModel(fileName: "icons", stateMachineName: "STAR_Interactivity", artboardName: "LIKE/STAR"), menu: .favorites),
-    MenuItem(text: "Chat", icon: RiveViewModel(fileName: "icons", stateMachineName: "CHAT_Interactivity", artboardName: "CHAT"), menu: .chat)
+    MenuItem(text: "Home", icon: RiveViewModel(fileName: "iconnew", stateMachineName: "HOME_interactivity", artboardName: "HOME"), menu: .home),
+    MenuItem(text: "Services", icon: RiveViewModel(fileName: "iconnew", stateMachineName: "STAR_Interactivity", artboardName: "LIKE/STAR"), menu: .favorites),
+    MenuItem(text: "Chat", icon: RiveViewModel(fileName: "iconnew", stateMachineName: "CHAT_Interactivity", artboardName: "CHAT"), menu: .chat),
+    MenuItem(text: "Teacher's loudge", icon: RiveViewModel(fileName: "iconnew", stateMachineName: "Teacher_interactivity", artboardName: "TEACHER"), menu: .teacherLoudge)
 ]
 
 var menuItems2 = [
-    MenuItem(text: "History", icon: RiveViewModel(fileName: "icons", stateMachineName: "TIMER_Interactivity", artboardName: "TIMER"), menu: .history),
-    MenuItem(text: "Notifications", icon: RiveViewModel(fileName: "icons", stateMachineName: "BELL_Interactivity", artboardName: "BELL"), menu: .notifications)
+    MenuItem(text: "History", icon: RiveViewModel(fileName: "iconnew", stateMachineName: "TIMER_Interactivity", artboardName: "TIMER"), menu: .history),
+    MenuItem(text: "Notifications", icon: RiveViewModel(fileName: "iconnew", stateMachineName: "BELL_Interactivity", artboardName: "BELL"), menu: .notifications)
 ]
 
 var menuItems3 = [
-    MenuItem(text: "Dark Mode", icon: RiveViewModel(fileName: "icons", stateMachineName: "SETTINGS_Interactivity", artboardName: "SETTINGS"), menu: .darkmode)
+    MenuItem(text: "Dark Mode", icon: RiveViewModel(fileName: "iconnew", stateMachineName: "SETTINGS_Interactivity", artboardName: "SETTINGS"), menu: .darkmode)
 ]
 
 enum SelectedMenu: String {

@@ -15,7 +15,7 @@ struct MenuRow: View {
       HStack(spacing:14) {
         item.icon.view()
           .frame(width:32, height: 32)
-          .opacity(0.6)
+         // .opacity(0.6)
         Text(item.text)
           .customFont(.headline)
       }

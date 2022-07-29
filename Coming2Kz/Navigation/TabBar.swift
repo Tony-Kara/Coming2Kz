@@ -72,11 +72,11 @@ struct TabItem: Identifiable {
 }
 
 var tabItems = [
-  TabItem(icon: RiveViewModel(fileName: "icons", stateMachineName: "CHAT_Interactivity", artboardName: "CHAT"), tab: .chat),
-  TabItem(icon: RiveViewModel(fileName: "icons", stateMachineName: "SEARCH_Interactivity", artboardName: "SEARCH"), tab: .search),
-  TabItem(icon: RiveViewModel(fileName: "icons", stateMachineName: "TIMER_Interactivity", artboardName: "TIMER"), tab: .timer),
-  TabItem(icon: RiveViewModel(fileName: "icons", stateMachineName: "BELL_Interactivity", artboardName: "BELL"), tab: .bell),
-  TabItem(icon: RiveViewModel(fileName: "icons", stateMachineName: "USER_Interactivity", artboardName: "USER"), tab: .user)
+  TabItem(icon: RiveViewModel(fileName: "iconnew", stateMachineName: "CHAT_Interactivity", artboardName: "CHAT"), tab: .chat),
+  TabItem(icon: RiveViewModel(fileName: "iconnew", stateMachineName: "SEARCH_Interactivity", artboardName: "SEARCH"), tab: .search),
+  TabItem(icon: RiveViewModel(fileName: "iconnew", stateMachineName: "TIMER_Interactivity", artboardName: "TIMER"), tab: .timer),
+  TabItem(icon: RiveViewModel(fileName: "iconnew", stateMachineName: "BELL_Interactivity", artboardName: "BELL"), tab: .bell),
+  TabItem(icon: RiveViewModel(fileName: "iconnew", stateMachineName: "Teacher_interactivity", artboardName: "TEACHER"), tab: .user)
 ]
 
 enum Tab: String {
