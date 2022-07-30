@@ -11,6 +11,7 @@ import RiveRuntime
 struct OnboardingView: View {
     let button = RiveViewModel(fileName: "button")
   @Binding var show : Bool
+  @State var showTabBar = false
     var body: some View {
         ZStack {
             RiveViewModel(fileName: "shapes").view()
@@ -38,7 +39,7 @@ struct OnboardingView: View {
                 Spacer()
                 
                 Button {
-                    
+                    showTabBar = true
                 } label: {
                     ZStack{
                         Rectangle()
@@ -76,6 +77,10 @@ struct OnboardingView: View {
           .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
           .padding(20)
           .offset(y:80)
+          
+          if showTabBar {
+            ChatTabBar()
+          }
         }
     }
 }
