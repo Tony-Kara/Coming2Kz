@@ -24,7 +24,7 @@
 		CEAA2AC3288D306200A25647 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA2AC2288D306200A25647 /* SideMenu.swift */; };
 		CEAA2AC5288D635C00A25647 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA2AC4288D635C00A25647 /* MenuRow.swift */; };
 		CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */; };
-		CEE07F3D287D9840008B6C62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F3C287D9840008B6C62 /* ContentView.swift */; };
+		CEE07F3D287D9840008B6C62 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F3C287D9840008B6C62 /* RootView.swift */; };
 		CEE07F42287D9848008B6C62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE07F41287D9848008B6C62 /* Preview Assets.xcassets */; };
 		CEE07F50287D9B91008B6C62 /* house.riv in Resources */ = {isa = PBXBuildFile; fileRef = CEE07F49287D9B90008B6C62 /* house.riv */; };
 		CEE07F51287D9B91008B6C62 /* confetti.riv in Resources */ = {isa = PBXBuildFile; fileRef = CEE07F4A287D9B90008B6C62 /* confetti.riv */; };
@@ -56,7 +56,7 @@
 		CEAA2AC4288D635C00A25647 /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 		CEE07F37287D9840008B6C62 /* Coming2Kz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coming2Kz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coming2KzApp.swift; sourceTree = "<group>"; };
-		CEE07F3C287D9840008B6C62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEE07F3C287D9840008B6C62 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		CEE07F41287D9848008B6C62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CEE07F49287D9B90008B6C62 /* house.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = house.riv; sourceTree = "<group>"; };
 		CEE07F4A287D9B90008B6C62 /* confetti.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.riv; sourceTree = "<group>"; };
@@ -125,6 +125,9 @@
 		CEAA2AC728902E9C00A25647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CEAA2AC4288D635C00A25647 /* MenuRow.swift */,
+				CEAA2ABE288A80CB00A25647 /* HCard.swift */,
+				CEAA2AB828869F3000A25647 /* VCard.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -133,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE07F5C28816C1D008B6C62 /* TabBar.swift */,
-				CEE07F3C287D9840008B6C62 /* ContentView.swift */,
+				CEE07F3C287D9840008B6C62 /* RootView.swift */,
 				CEAA2AC2288D306200A25647 /* SideMenu.swift */,
 			);
 			path = Navigation;
@@ -159,14 +162,13 @@
 			isa = PBXGroup;
 			children = (
 				CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */,
-				CEAA2AC828902EE200A25647 /* Navigation */,
-				CEAA2AC728902E9C00A25647 /* Components */,
-				CEAA2AC4288D635C00A25647 /* MenuRow.swift */,
-				CEAA2ABE288A80CB00A25647 /* HCard.swift */,
-				CEAA2AB828869F3000A25647 /* VCard.swift */,
-				7F78F9A828803D6E00D27FDF /* Helpers */,
+				CEF4976828947555007F60EE /* Services */,
 				CEAA2AB028859F0600A25647 /* Model */,
 				CEAA2AB528859F9E00A25647 /* Views */,
+				CEF4976728947538007F60EE /* ViewModels */,
+				CEAA2AC828902EE200A25647 /* Navigation */,
+				CEAA2AC728902E9C00A25647 /* Components */,
+				7F78F9A828803D6E00D27FDF /* Helpers */,
 				7F78F9A028803A8500D27FDF /* Fonts */,
 				CEE07F48287D9B90008B6C62 /* RiveAssets */,
 				CEE07F40287D9848008B6C62 /* Preview Content */,
@@ -195,6 +197,20 @@
 				CEE07F4F287D9B90008B6C62 /* icons.riv */,
 			);
 			path = RiveAssets;
+			sourceTree = "<group>";
+		};
+		CEF4976728947538007F60EE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEF4976828947555007F60EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +307,7 @@
 				CEE07F5B287D9D01008B6C62 /* OnboardingView.swift in Sources */,
 				7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */,
 				7F23E256288063C3007CAD1F /* CustomTextField.swift in Sources */,
-				CEE07F3D287D9840008B6C62 /* ContentView.swift in Sources */,
+				CEE07F3D287D9840008B6C62 /* RootView.swift in Sources */,
 				CEAA2AB928869F3000A25647 /* VCard.swift in Sources */,
 				CEAA2AB728869E9B00A25647 /* Extensions.swift in Sources */,
 				CEAA2AB328859F0700A25647 /* CourseSection.swift in Sources */,

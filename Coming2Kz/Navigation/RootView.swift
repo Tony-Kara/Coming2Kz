@@ -8,7 +8,7 @@
 import SwiftUI
 import RiveRuntime
 
-struct ContentView: View {
+struct RootView: View {
   @AppStorage("selectedTab") var selectedTab: Tab = .chat
   @State var isOpen = true
   @State var show = false
@@ -112,8 +112,8 @@ struct ContentView: View {
   }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct RootView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    RootView()
   }
 }
