@@ -16,68 +16,74 @@ struct ChatTabBar: View {
   @State var selectedTab : Tabs = .contacts
   @EnvironmentObject var rootModel: RootModel
   var body: some View {
-    HStack(alignment: .center) {
-      
-      Button {
-        selectedTab = .chats
-      } label: {
-        GeometryReader { geo in
+    
+    VStack {
+      Spacer()
+      HStack(alignment: .center) {
+        
+        Button {
+          selectedTab = .chats
+        } label: {
+          GeometryReader { geo in
+            VStack(alignment: .center, spacing: 4) {
+                 Rectangle()
+                 .foregroundColor(.blue)
+                 .frame(width: selectedTab == .chats ? geo.size.width/2 : 0 , height: 4)
+              Image(systemName: "bubble.left")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 24, height: 24)
+              Text("Chats")
+                .customFont(.caption2)
+            }
+            .frame(width: geo.size.width, height: geo.size.height)
+          }
+          
+        }
+        .tint(Color("icons-secondary"))
+        
+        Button {
+          
+        } label: {
           VStack(alignment: .center, spacing: 4) {
-               Rectangle()
-               .foregroundColor(.blue)
-               .frame(width: selectedTab == .chats ? geo.size.width/2 : 0 , height: 4)
-            Image(systemName: "bubble.left")
+            Image(systemName: "plus.circle.fill")
               .resizable()
               .scaledToFit()
-              .frame(width: 24, height: 24)
-            Text("Chats")
+              .frame(width: 32, height: 32)
+            Text("New Chat")
               .customFont(.caption2)
           }
-          .frame(width: geo.size.width, height: geo.size.height)
         }
+        .tint(Color("icons-primary"))
         
-      }
-      .tint(Color("icons-secondary"))
-      
-      Button {
-        
-      } label: {
-        VStack(alignment: .center, spacing: 4) {
-          Image(systemName: "plus.circle.fill")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 32, height: 32)
-          Text("New Chat")
-            .customFont(.caption2)
-        }
-      }
-      .tint(Color("icons-primary"))
-      
-      Button {
-        selectedTab = .contacts
-      } label: {
-        GeometryReader { geo in
-          VStack(alignment: .center, spacing: 4) {
-            Rectangle()
-            .foregroundColor(.blue)
-            .frame(width: selectedTab == .contacts ? geo.size.width/2 : 0, height: 4)
-            Image(systemName: "person")
-              .resizable()
-              .scaledToFit()
-              .frame(width: 24, height: 24)
-            Text("Contacts")
-              .customFont(.caption2)
+        Button {
+          selectedTab = .contacts
+        } label: {
+          GeometryReader { geo in
+            VStack(alignment: .center, spacing: 4) {
+              Rectangle()
+              .foregroundColor(.blue)
+              .frame(width: selectedTab == .contacts ? geo.size.width/2 : 0, height: 4)
+              Image(systemName: "person")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 24, height: 24)
+              Text("Contacts")
+                .customFont(.caption2)
+            }
+            .frame(width: geo.size.width, height: geo.size.height)
           }
-          .frame(width: geo.size.width, height: geo.size.height)
         }
+        
+        .tint(Color("icons-secondary"))
+        
       }
-      
-      .tint(Color("icons-secondary"))
-      
+      .frame(height:82)
+  
     }
     .onAppear {
       rootModel.dismissMainTab = true
-    }
+  }
   }
 }
 
