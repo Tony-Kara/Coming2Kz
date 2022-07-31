@@ -32,7 +32,8 @@ struct RootView: View {
           case .search:
             SignInView()
           case .timer:
-            Text("Hello, world!")
+            OnboardingView()
+              .background(.white)
           case .bell:
             Text("Hello, world!")
           case .user:
