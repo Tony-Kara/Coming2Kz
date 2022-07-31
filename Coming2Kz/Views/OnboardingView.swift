@@ -10,8 +10,7 @@ import RiveRuntime
 
 struct OnboardingView: View {
   @State var selectedTabs: Tabs = .contacts
- // @State var dismissMainTabBar = true
-  @State var showTabBar = false
+  @State var showChatTabBar = false
   let button = RiveViewModel(fileName: "button")
     var body: some View {
         ZStack {
@@ -40,7 +39,7 @@ struct OnboardingView: View {
                 Spacer()
                 
                 Button {
-                    showTabBar = true
+                    showChatTabBar = true
                 } label: {
                     ZStack{
                         Rectangle()
@@ -63,23 +62,23 @@ struct OnboardingView: View {
             .padding(40)
             .padding(.top,40)
           
-          Button {
-              withAnimation {
-              //  show = false
-              }
-          } label: {
-              Image(systemName: "xmark")
-                  .foregroundColor(.white)
-                  .frame(width: 36, height: 36)
-                  .background(.black)
-                  .mask(Circle())
-                  .shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 10)
-          }
-          .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-          .padding(20)
-          .offset(y:80)
+//          Button {
+//              withAnimation {
+//              //  show = false
+//              }
+//          } label: {
+//              Image(systemName: "xmark")
+//                  .foregroundColor(.white)
+//                  .frame(width: 36, height: 36)
+//                  .background(.black)
+//                  .mask(Circle())
+//                  .shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 10)
+//          }
+//          .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+//          .padding(20)
+//          .offset(y:80)
           
-          if showTabBar {
+          if showChatTabBar {
             ChatTabBar()
               .background(.white)
           }

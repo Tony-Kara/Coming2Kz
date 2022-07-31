@@ -15,7 +15,6 @@ enum Tabs: Int {
 struct ChatTabBar: View {
   @State var selectedTab : Tabs = .contacts
   @EnvironmentObject var rootModel: RootModel
- // @Binding var dismissMainTabBar : Bool
   var body: some View {
     HStack(alignment: .center) {
       
