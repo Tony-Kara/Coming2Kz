@@ -8,8 +8,9 @@
 import SwiftUI
 
 enum Tabs: Int {
-  case chats = 0
-  case contacts = 1
+  case home = 0
+  case chats = 1
+  case contacts = 2
 }
 
 struct ChatTabBar: View {
@@ -17,73 +18,122 @@ struct ChatTabBar: View {
   @EnvironmentObject var rootModel: RootModel
   var body: some View {
     
-    VStack {
-      Spacer()
-      HStack(alignment: .center) {
-        
-        Button {
-          selectedTab = .chats
-        } label: {
-          GeometryReader { geo in
+    ZStack {
+      Color("Background").ignoresSafeArea()
+      VStack {
+        Spacer()
+        HStack(alignment: .center, spacing: 35) {
+          
+          Button {
+            selectedTab = .home
+          } label: {
+            
+              
+              VStack(alignment: .center, spacing: 4) {
+                Image(systemName: "bubble.left")
+                  .resizable()
+                  .scaledToFit()
+                  .frame(width: 24, height: 24)
+                
+                Text("Home")
+                  .customFont(.caption2)
+              }
+              .background(
+                VStack{
+                  RoundedRectangle(cornerRadius: 2)
+                    .fill(.blue)
+                    .frame(width:selectedTab == .home ? 30 : 0, height: 4)
+                    .offset(y:-4)
+                    .opacity(1)
+                  Spacer()
+                  
+                }
+              )
+             
+            
+            
+          }
+          .tint(Color("icons-secondary"))
+          
+          
+          Button {
+            selectedTab = .chats
+          } label: {
+            
+              
+              VStack(alignment: .center, spacing: 4) {
+                Image(systemName: "bubble.left")
+                  .resizable()
+                  .scaledToFit()
+                  .frame(width: 24, height: 24)
+                
+                Text("Chats")
+                  .customFont(.caption2)
+              }
+              .background(
+                VStack{
+                  RoundedRectangle(cornerRadius: 2)
+                    .fill(.blue)
+                    .frame(width:selectedTab == .chats ? 30 : 0,height: 4)
+                    .offset(y:-4)
+                    .opacity(1)
+                  Spacer()
+                  
+                }
+              )
+          }
+          .tint(Color("icons-secondary"))
+          
+          Button {
+            
+          } label: {
             VStack(alignment: .center, spacing: 4) {
-                 Rectangle()
-                 .foregroundColor(.blue)
-                 .frame(width: selectedTab == .chats ? geo.size.width/2 : 0 , height: 4)
-              Image(systemName: "bubble.left")
+              Image(systemName: "plus.circle.fill")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 24, height: 24)
-              Text("Chats")
+                .frame(width: 32, height: 32)
+              Text("New Chat")
                 .customFont(.caption2)
             }
-            .frame(width: geo.size.width, height: geo.size.height)
+          }
+          .tint(Color("icons-primary"))
+          
+          Button {
+            selectedTab = .contacts
+          } label: {
+          
+              VStack(alignment: .center, spacing: 4) {
+                Image(systemName: "person")
+                  .resizable()
+                  .scaledToFit()
+                  .frame(width: 24, height: 24)
+                Text("Contacts")
+                  .customFont(.caption2)
+              }
+              .background(
+                VStack{
+                  RoundedRectangle(cornerRadius: 2)
+                    .fill(.blue)
+                    .frame(width:selectedTab == .contacts ? 30 : 0,height: 4)
+                    .offset(y:-4)
+                    .opacity(1)
+                  Spacer()
+                  
+                }
+              )
+          
+            
           }
           
-        }
-        .tint(Color("icons-secondary"))
-        
-        Button {
+          .tint(Color("icons-secondary"))
           
-        } label: {
-          VStack(alignment: .center, spacing: 4) {
-            Image(systemName: "plus.circle.fill")
-              .resizable()
-              .scaledToFit()
-              .frame(width: 32, height: 32)
-            Text("New Chat")
-              .customFont(.caption2)
-          }
         }
-        .tint(Color("icons-primary"))
-        
-        Button {
-          selectedTab = .contacts
-        } label: {
-          GeometryReader { geo in
-            VStack(alignment: .center, spacing: 4) {
-              Rectangle()
-              .foregroundColor(.blue)
-              .frame(width: selectedTab == .contacts ? geo.size.width/2 : 0, height: 4)
-              Image(systemName: "person")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 24, height: 24)
-              Text("Contacts")
-                .customFont(.caption2)
-            }
-            .frame(width: geo.size.width, height: geo.size.height)
-          }
-        }
-        
-        .tint(Color("icons-secondary"))
-        
+        .onAppear {
+          rootModel.dismissMainTab = true
       }
-      .frame(height:82)
-  
+      }
     }
-    .onAppear {
-      rootModel.dismissMainTab = true
-  }
+    
   }
 }
 
