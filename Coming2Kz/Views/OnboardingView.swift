@@ -9,8 +9,9 @@ import SwiftUI
 import RiveRuntime
 
 struct OnboardingView: View {
+  @State var selectedTabs: Tabs = .contacts
     let button = RiveViewModel(fileName: "button")
-  @Binding var show : Bool
+ // @Binding var show : Bool
   @State var showTabBar = false
     var body: some View {
         ZStack {
@@ -64,7 +65,7 @@ struct OnboardingView: View {
           
           Button {
               withAnimation {
-                show = false
+              //  show = false
               }
           } label: {
               Image(systemName: "xmark")
@@ -80,12 +81,13 @@ struct OnboardingView: View {
           
           if showTabBar {
             ChatTabBar()
+              .background(.white)
           }
         }
     }
 }
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-      OnboardingView(show: .constant(true))
+      OnboardingView()
     }
 }

@@ -7,16 +7,24 @@
 
 import SwiftUI
 
+enum Tabs: Int {
+  case chats = 0
+  case contacts = 1
+}
+
 struct ChatTabBar: View {
+  @State var selectedTab : Tabs = .contacts
   var body: some View {
     HStack(alignment: .center) {
       
       Button {
-        
+        selectedTab = .chats
       } label: {
         GeometryReader { geo in
-          
           VStack(alignment: .center, spacing: 4) {
+               Rectangle()
+               .foregroundColor(.blue)
+               .frame(width: selectedTab == .chats ? geo.size.width/2 : 0 , height: 4)
             Image(systemName: "bubble.left")
               .resizable()
               .scaledToFit()
@@ -45,10 +53,13 @@ struct ChatTabBar: View {
       .tint(Color("icons-primary"))
       
       Button {
-        
+        selectedTab = .contacts
       } label: {
         GeometryReader { geo in
           VStack(alignment: .center, spacing: 4) {
+            Rectangle()
+            .foregroundColor(.blue)
+            .frame(width: selectedTab == .contacts ? geo.size.width/2 : 0, height: 4)
             Image(systemName: "person")
               .resizable()
               .scaledToFit()
