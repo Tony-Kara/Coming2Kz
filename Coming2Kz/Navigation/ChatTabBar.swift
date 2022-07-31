@@ -14,6 +14,8 @@ enum Tabs: Int {
 
 struct ChatTabBar: View {
   @State var selectedTab : Tabs = .contacts
+  @EnvironmentObject var rootModel: RootModel
+ // @Binding var dismissMainTabBar : Bool
   var body: some View {
     HStack(alignment: .center) {
       
@@ -74,11 +76,15 @@ struct ChatTabBar: View {
       .tint(Color("icons-secondary"))
       
     }
+    .onAppear {
+      rootModel.dismissMainTab = true
+    }
   }
 }
 
 struct ChatTabBar_Previews: PreviewProvider {
   static var previews: some View {
     ChatTabBar()
+      .environmentObject(RootModel())
   }
 }

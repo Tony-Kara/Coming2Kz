@@ -14,6 +14,7 @@
 		7F78F9A628803A8500D27FDF /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */; };
 		7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78F9A928803DA200D27FDF /* CustomFonts.swift */; };
 		CE3DFA5F28952B2700E5A960 /* ChatTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */; };
+		CE3DFA612896AC0400E5A960 /* RootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DFA602896AC0400E5A960 /* RootModel.swift */; };
 		CEAA2AAF288584E200A25647 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F5C28816C1D008B6C62 /* TabBar.swift */; };
 		CEAA2AB328859F0700A25647 /* CourseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA2AB128859F0600A25647 /* CourseSection.swift */; };
 		CEAA2AB428859F0700A25647 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA2AB228859F0600A25647 /* Course.swift */; };
@@ -47,6 +48,7 @@
 		7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		7F78F9A928803DA200D27FDF /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTabBar.swift; sourceTree = "<group>"; };
+		CE3DFA602896AC0400E5A960 /* RootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModel.swift; sourceTree = "<group>"; };
 		CEAA2AB128859F0600A25647 /* CourseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSection.swift; sourceTree = "<group>"; };
 		CEAA2AB228859F0600A25647 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		CEAA2AB628869E9B00A25647 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		CEF4976728947538007F60EE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CE3DFA602896AC0400E5A960 /* RootModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */,
 				7F5FDCBD2880557800EDCB28 /* SignInView.swift in Sources */,
 				CEAA2AAF288584E200A25647 /* TabBar.swift in Sources */,
+				CE3DFA612896AC0400E5A960 /* RootModel.swift in Sources */,
 				CEAA2AC5288D635C00A25647 /* MenuRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

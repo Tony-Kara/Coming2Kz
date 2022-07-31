@@ -10,9 +10,9 @@ import RiveRuntime
 
 struct OnboardingView: View {
   @State var selectedTabs: Tabs = .contacts
-    let button = RiveViewModel(fileName: "button")
- // @Binding var show : Bool
+ // @State var dismissMainTabBar = true
   @State var showTabBar = false
+  let button = RiveViewModel(fileName: "button")
     var body: some View {
         ZStack {
             RiveViewModel(fileName: "shapes").view()

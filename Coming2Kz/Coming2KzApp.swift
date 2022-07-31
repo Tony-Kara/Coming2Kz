@@ -12,6 +12,7 @@ struct Coming2KzApp: App {
     var body: some Scene {
         WindowGroup {
            RootView()
+            .environmentObject(RootModel())
         }
     }
 }
