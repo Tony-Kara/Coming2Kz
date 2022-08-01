@@ -15,6 +15,7 @@
 		7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78F9A928803DA200D27FDF /* CustomFonts.swift */; };
 		CE3DFA5F28952B2700E5A960 /* ChatTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */; };
 		CE3DFA612896AC0400E5A960 /* RootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DFA602896AC0400E5A960 /* RootModel.swift */; };
+		CE942F05289806C60051B317 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE942F04289806C60051B317 /* TabBarButton.swift */; };
 		CEAA2AAF288584E200A25647 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F5C28816C1D008B6C62 /* TabBar.swift */; };
 		CEAA2AB328859F0700A25647 /* CourseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA2AB128859F0600A25647 /* CourseSection.swift */; };
 		CEAA2AB428859F0700A25647 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA2AB228859F0600A25647 /* Course.swift */; };
@@ -49,6 +50,7 @@
 		7F78F9A928803DA200D27FDF /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTabBar.swift; sourceTree = "<group>"; };
 		CE3DFA602896AC0400E5A960 /* RootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModel.swift; sourceTree = "<group>"; };
+		CE942F04289806C60051B317 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
 		CEAA2AB128859F0600A25647 /* CourseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseSection.swift; sourceTree = "<group>"; };
 		CEAA2AB228859F0600A25647 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		CEAA2AB628869E9B00A25647 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -106,6 +108,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		CE942F01289804B50051B317 /* Chat Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */,
+				CE942F04289806C60051B317 /* TabBarButton.swift */,
+			);
+			path = "Chat Views";
+			sourceTree = "<group>";
+		};
 		CEAA2AB028859F0600A25647 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +129,7 @@
 		CEAA2AB528859F9E00A25647 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE942F01289804B50051B317 /* Chat Views */,
 				CEAA2AC0288AA79100A25647 /* HomeView.swift */,
 				7F5FDCBC2880557800EDCB28 /* SignInView.swift */,
 				CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */,
@@ -129,7 +141,6 @@
 		CEAA2AC728902E9C00A25647 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				CEAA2AC4288D635C00A25647 /* MenuRow.swift */,
 				CEAA2ABE288A80CB00A25647 /* HCard.swift */,
 				CEAA2AB828869F3000A25647 /* VCard.swift */,
 			);
@@ -141,8 +152,8 @@
 			children = (
 				CEE07F5C28816C1D008B6C62 /* TabBar.swift */,
 				CEE07F3C287D9840008B6C62 /* RootView.swift */,
+				CEAA2AC4288D635C00A25647 /* MenuRow.swift */,
 				CEAA2AC2288D306200A25647 /* SideMenu.swift */,
-				CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -311,6 +322,7 @@
 				CEAA2AC1288AA79100A25647 /* HomeView.swift in Sources */,
 				CEAA2AC3288D306200A25647 /* SideMenu.swift in Sources */,
 				CEE07F5B287D9D01008B6C62 /* OnboardingView.swift in Sources */,
+				CE942F05289806C60051B317 /* TabBarButton.swift in Sources */,
 				7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */,
 				7F23E256288063C3007CAD1F /* CustomTextField.swift in Sources */,
 				CE3DFA5F28952B2700E5A960 /* ChatTabBar.swift in Sources */,

@@ -11,7 +11,6 @@ import RiveRuntime
 struct OnboardingView: View {
   @State var selectedTabs: Tabs = .contacts
   @State var showChatTabBar = false
-  let button = RiveViewModel(fileName: "button")
     var body: some View {
         ZStack {
             RiveViewModel(fileName: "shapes").view()
