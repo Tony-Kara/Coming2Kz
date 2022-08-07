@@ -23,7 +23,7 @@ struct MenuRow: View {
       .padding(12)
       .background(
         RoundedRectangle(cornerRadius: 10, style: .continuous)
-          .fill(.blue)
+          .fill(Color("BgColorBlue"))
           .frame(maxWidth: selectedMenu == item.menu ? .infinity: 0)
           .frame(maxWidth: .infinity, alignment: .leading)
       )
