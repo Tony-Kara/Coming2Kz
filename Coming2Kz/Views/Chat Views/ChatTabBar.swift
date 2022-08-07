@@ -30,13 +30,12 @@ var chatTabItems = [
 ]
 
 struct ChatTabBar: View {
-  @State var selectedTab : Tabs = .contacts
-  @State var isOnboarding = !AuthViewModel.isUserLoggedIn()
+ // @Binding var selectedTab: Tabs
+  @AppStorage("selectedChatTab") var selectedTab: Tabs = .home
   @EnvironmentObject var rootModel: RootModel
   var body: some View {
     
-    ZStack {
-      Color("Background").ignoresSafeArea()
+   
       VStack {
         Spacer()
         HStack(alignment: .center, spacing: 35) {
@@ -50,18 +49,13 @@ struct ChatTabBar: View {
             .tint(Color(item.buttonTintColour))
           }
         }
+        .padding(12)
+        .padding(.horizontal, 24)
         .onAppear {
           rootModel.dismissMainTab = true
         }
       }
-    }.fullScreenCover(isPresented: $isOnboarding) {
-      //
-    } content: {
-      // onboarding flow
-      OnboardingContainerView(isOnboarding: $isOnboarding)
-    }
-
-
+    
   }
 }
 

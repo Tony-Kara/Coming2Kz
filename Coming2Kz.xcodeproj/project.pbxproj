@@ -14,6 +14,7 @@
 		7F78F9A628803A8500D27FDF /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */; };
 		7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78F9A928803DA200D27FDF /* CustomFonts.swift */; };
 		CE1236BF289864E200B86F03 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1236BE289864E200B86F03 /* AuthViewModel.swift */; };
+		CE1A5554289FBE1D00673015 /* ChatRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A5553289FBE1D00673015 /* ChatRootView.swift */; };
 		CE3A927D289C183700288DBE /* CreateProfileTextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A927C289C183700288DBE /* CreateProfileTextfieldStyle.swift */; };
 		CE3DFA5F28952B2700E5A960 /* ChatTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */; };
 		CE3DFA612896AC0400E5A960 /* RootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DFA602896AC0400E5A960 /* RootModel.swift */; };
@@ -64,6 +65,7 @@
 		7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		7F78F9A928803DA200D27FDF /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		CE1236BE289864E200B86F03 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CE1A5553289FBE1D00673015 /* ChatRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRootView.swift; sourceTree = "<group>"; };
 		CE3A927C289C183700288DBE /* CreateProfileTextfieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileTextfieldStyle.swift; sourceTree = "<group>"; };
 		CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTabBar.swift; sourceTree = "<group>"; };
 		CE3DFA602896AC0400E5A960 /* RootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModel.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				CEAB3975289A7D6000BCBD5B /* onboarding */,
 				CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */,
 				CE942F04289806C60051B317 /* TabBarButton.swift */,
+				CE1A5553289FBE1D00673015 /* ChatRootView.swift */,
 			);
 			path = "Chat Views";
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				CEAA2AC3288D306200A25647 /* SideMenu.swift in Sources */,
 				CEE07F5B287D9D01008B6C62 /* OnboardingView.swift in Sources */,
 				CE942F05289806C60051B317 /* TabBarButton.swift in Sources */,
+				CE1A5554289FBE1D00673015 /* ChatRootView.swift in Sources */,
 				7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */,
 				CEAB397F289A7F6000BCBD5B /* CreateProfileView.swift in Sources */,
 				7F23E256288063C3007CAD1F /* CustomTextField.swift in Sources */,

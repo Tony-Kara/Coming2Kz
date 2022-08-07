@@ -78,7 +78,7 @@ struct OnboardingView: View {
 //          .offset(y:80)
           
           if showChatTabBar {
-            ChatTabBar()
+            ChatRootView()
               .offset(y:-24)
               .background(.white)
               .ignoresSafeArea()
