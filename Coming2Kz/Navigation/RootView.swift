@@ -123,7 +123,6 @@ struct RootView: View {
                 isOpen.toggle()
               
               }
-              print("Hello")
             }, label: {
                         button.view()
                           .frame(width: 44, height: 44)

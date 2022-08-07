@@ -17,11 +17,11 @@ struct VerificationView: View {
           .customFont(.title2)
               .padding(.top, 52)
           
-          Text("Enter your mobile number below. We’ll send you a verification code after.")
+          Text("Enter the 4-digit verification code sent to your device.")
           .customFont(.subheadline)
               .padding(.top, 12)
           
-          // Textfield
+        
           ZStack {
               
               Rectangle()
@@ -36,7 +36,6 @@ struct VerificationView: View {
                   Spacer()
                   
                   Button {
-                      // Clear verification code
                     verificationCode = ""
                     
                   } label: {

@@ -8,13 +8,43 @@
 import SwiftUI
 
 struct SyncContactsView: View {
+  @Binding var isOnboarding: Bool
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      VStack {
+          Spacer()
+          
+          Image("onboarding-all-set")
+          
+          Text("Awesome!")
+          .customFont(.title2)
+              .padding(.top, 32)
+          
+          Text("Continue to chat with other foreigners")
+          .customFont(.subheadline)
+              .padding(.top, 5)
+              
+          
+          
+          Spacer()
+          
+          Button {
+              
+            isOnboarding = false
+              
+          } label: {
+              Text("Continue")
+          }
+          .buttonStyle(OnboardingButtonStyle())
+              .padding(.bottom, 87)
+
+          
+      }
+      .padding(.horizontal)
     }
 }
 
 struct SyncContactsView_Previews: PreviewProvider {
     static var previews: some View {
-        SyncContactsView()
+      SyncContactsView(isOnboarding: .constant(true))
     }
 }

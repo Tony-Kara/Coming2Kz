@@ -58,7 +58,7 @@ struct ChatTabBar: View {
       //
     } content: {
       // onboarding flow
-      OnboardingContainerView()
+      OnboardingContainerView(isOnboarding: $isOnboarding)
     }
 
 
