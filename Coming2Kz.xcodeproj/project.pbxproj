@@ -14,6 +14,7 @@
 		7F78F9A628803A8500D27FDF /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */; };
 		7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78F9A928803DA200D27FDF /* CustomFonts.swift */; };
 		CE1236BF289864E200B86F03 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1236BE289864E200B86F03 /* AuthViewModel.swift */; };
+		CE3A927D289C183700288DBE /* CreateProfileTextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A927C289C183700288DBE /* CreateProfileTextfieldStyle.swift */; };
 		CE3DFA5F28952B2700E5A960 /* ChatTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */; };
 		CE3DFA612896AC0400E5A960 /* RootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DFA602896AC0400E5A960 /* RootModel.swift */; };
 		CE942F05289806C60051B317 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE942F04289806C60051B317 /* TabBarButton.swift */; };
@@ -33,6 +34,13 @@
 		CEAA2AC1288AA79100A25647 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA2AC0288AA79100A25647 /* HomeView.swift */; };
 		CEAA2AC3288D306200A25647 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA2AC2288D306200A25647 /* SideMenu.swift */; };
 		CEAA2AC5288D635C00A25647 /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAA2AC4288D635C00A25647 /* MenuRow.swift */; };
+		CEAB3977289A7DBA00BCBD5B /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3976289A7DBA00BCBD5B /* OnboardingContainerView.swift */; };
+		CEAB3979289A7F2000BCBD5B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3978289A7F2000BCBD5B /* WelcomeView.swift */; };
+		CEAB397B289A7F3500BCBD5B /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB397A289A7F3500BCBD5B /* PhoneNumberView.swift */; };
+		CEAB397D289A7F4D00BCBD5B /* VerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB397C289A7F4D00BCBD5B /* VerificationView.swift */; };
+		CEAB397F289A7F6000BCBD5B /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB397E289A7F6000BCBD5B /* CreateProfileView.swift */; };
+		CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */; };
+		CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */; };
 		CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */; };
 		CEE07F3D287D9840008B6C62 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F3C287D9840008B6C62 /* RootView.swift */; };
 		CEE07F42287D9848008B6C62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE07F41287D9848008B6C62 /* Preview Assets.xcassets */; };
@@ -56,6 +64,7 @@
 		7F78F9A328803A8500D27FDF /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		7F78F9A928803DA200D27FDF /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		CE1236BE289864E200B86F03 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CE3A927C289C183700288DBE /* CreateProfileTextfieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileTextfieldStyle.swift; sourceTree = "<group>"; };
 		CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTabBar.swift; sourceTree = "<group>"; };
 		CE3DFA602896AC0400E5A960 /* RootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModel.swift; sourceTree = "<group>"; };
 		CE942F04289806C60051B317 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
@@ -71,6 +80,13 @@
 		CEAA2AC0288AA79100A25647 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CEAA2AC2288D306200A25647 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		CEAA2AC4288D635C00A25647 /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
+		CEAB3976289A7DBA00BCBD5B /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
+		CEAB3978289A7F2000BCBD5B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		CEAB397A289A7F3500BCBD5B /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
+		CEAB397C289A7F4D00BCBD5B /* VerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationView.swift; sourceTree = "<group>"; };
+		CEAB397E289A7F6000BCBD5B /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
+		CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsView.swift; sourceTree = "<group>"; };
+		CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
 		CEE07F37287D9840008B6C62 /* Coming2Kz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coming2Kz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coming2KzApp.swift; sourceTree = "<group>"; };
 		CEE07F3C287D9840008B6C62 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -116,6 +132,8 @@
 		7F78F9A828803D6E00D27FDF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */,
+				CE3A927C289C183700288DBE /* CreateProfileTextfieldStyle.swift */,
 				CEAA2AB628869E9B00A25647 /* Extensions.swift */,
 				7F78F9A928803DA200D27FDF /* CustomFonts.swift */,
 				7F23E255288063C3007CAD1F /* CustomTextField.swift */,
@@ -126,6 +144,7 @@
 		CE942F01289804B50051B317 /* Chat Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEAB3975289A7D6000BCBD5B /* onboarding */,
 				CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */,
 				CE942F04289806C60051B317 /* TabBarButton.swift */,
 			);
@@ -148,7 +167,6 @@
 				CEAA2AC0288AA79100A25647 /* HomeView.swift */,
 				7F5FDCBC2880557800EDCB28 /* SignInView.swift */,
 				CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */,
-				CEAA2ABC2886B72600A25647 /* Assets.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +189,27 @@
 				CEAA2AC2288D306200A25647 /* SideMenu.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		CEAB3974289A7B0100BCBD5B /* ChatViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE1236BE289864E200B86F03 /* AuthViewModel.swift */,
+			);
+			path = ChatViewModel;
+			sourceTree = "<group>";
+		};
+		CEAB3975289A7D6000BCBD5B /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB3976289A7DBA00BCBD5B /* OnboardingContainerView.swift */,
+				CEAB3978289A7F2000BCBD5B /* WelcomeView.swift */,
+				CEAB397A289A7F3500BCBD5B /* PhoneNumberView.swift */,
+				CEAB397C289A7F4D00BCBD5B /* VerificationView.swift */,
+				CEAB397E289A7F6000BCBD5B /* CreateProfileView.swift */,
+				CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */,
+			);
+			path = onboarding;
 			sourceTree = "<group>";
 		};
 		CEE07F2E287D9840008B6C62 = {
@@ -205,6 +244,7 @@
 				7F78F9A828803D6E00D27FDF /* Helpers */,
 				7F78F9A028803A8500D27FDF /* Fonts */,
 				CEE07F48287D9B90008B6C62 /* RiveAssets */,
+				CEAA2ABC2886B72600A25647 /* Assets.xcassets */,
 				CEE07F40287D9848008B6C62 /* Preview Content */,
 			);
 			path = Coming2Kz;
@@ -236,8 +276,8 @@
 		CEF4976728947538007F60EE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CEAB3974289A7B0100BCBD5B /* ChatViewModel */,
 				CE3DFA602896AC0400E5A960 /* RootModel.swift */,
-				CE1236BE289864E200B86F03 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -342,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */,
 				CE1236BF289864E200B86F03 /* AuthViewModel.swift in Sources */,
 				CEAA2ABF288A80CB00A25647 /* HCard.swift in Sources */,
 				CEAA2AB428859F0700A25647 /* Course.swift in Sources */,
@@ -351,15 +392,22 @@
 				CEE07F5B287D9D01008B6C62 /* OnboardingView.swift in Sources */,
 				CE942F05289806C60051B317 /* TabBarButton.swift in Sources */,
 				7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */,
+				CEAB397F289A7F6000BCBD5B /* CreateProfileView.swift in Sources */,
 				7F23E256288063C3007CAD1F /* CustomTextField.swift in Sources */,
 				CE3DFA5F28952B2700E5A960 /* ChatTabBar.swift in Sources */,
+				CEAB3977289A7DBA00BCBD5B /* OnboardingContainerView.swift in Sources */,
 				CEE07F3D287D9840008B6C62 /* RootView.swift in Sources */,
 				CEAA2AB928869F3000A25647 /* VCard.swift in Sources */,
+				CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */,
+				CE3A927D289C183700288DBE /* CreateProfileTextfieldStyle.swift in Sources */,
 				CEAA2AB728869E9B00A25647 /* Extensions.swift in Sources */,
+				CEAB397D289A7F4D00BCBD5B /* VerificationView.swift in Sources */,
 				CEAA2AB328859F0700A25647 /* CourseSection.swift in Sources */,
 				CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */,
+				CEAB3979289A7F2000BCBD5B /* WelcomeView.swift in Sources */,
 				7F5FDCBD2880557800EDCB28 /* SignInView.swift in Sources */,
 				CEAA2AAF288584E200A25647 /* TabBar.swift in Sources */,
+				CEAB397B289A7F3500BCBD5B /* PhoneNumberView.swift in Sources */,
 				CE3DFA612896AC0400E5A960 /* RootModel.swift in Sources */,
 				CEAA2AC5288D635C00A25647 /* MenuRow.swift in Sources */,
 			);

@@ -31,6 +31,7 @@ var chatTabItems = [
 
 struct ChatTabBar: View {
   @State var selectedTab : Tabs = .contacts
+  @State var isOnboarding = !AuthViewModel.isUserLoggedIn()
   @EnvironmentObject var rootModel: RootModel
   var body: some View {
     
@@ -53,7 +54,14 @@ struct ChatTabBar: View {
           rootModel.dismissMainTab = true
         }
       }
+    }.fullScreenCover(isPresented: $isOnboarding) {
+      //
+    } content: {
+      // onboarding flow
+      OnboardingContainerView()
     }
+
+
   }
 }
 
