@@ -15,6 +15,10 @@
 		7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F78F9A928803DA200D27FDF /* CustomFonts.swift */; };
 		CE1236BF289864E200B86F03 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1236BE289864E200B86F03 /* AuthViewModel.swift */; };
 		CE1A5554289FBE1D00673015 /* ChatRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A5553289FBE1D00673015 /* ChatRootView.swift */; };
+		CE1A5556289FF08300673015 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A5555289FF08300673015 /* ContactsViewModel.swift */; };
+		CE1A5559289FF8D300673015 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A5558289FF8D300673015 /* User.swift */; };
+		CE1A555B289FFB1000673015 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A555A289FFB1000673015 /* DatabaseService.swift */; };
+		CE1A555E28A0016400673015 /* PhoneNumberCleanUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1A555D28A0016400673015 /* PhoneNumberCleanUp.swift */; };
 		CE3A927D289C183700288DBE /* CreateProfileTextfieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A927C289C183700288DBE /* CreateProfileTextfieldStyle.swift */; };
 		CE3DFA5F28952B2700E5A960 /* ChatTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */; };
 		CE3DFA612896AC0400E5A960 /* RootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3DFA602896AC0400E5A960 /* RootModel.swift */; };
@@ -66,6 +70,10 @@
 		7F78F9A928803DA200D27FDF /* CustomFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFonts.swift; sourceTree = "<group>"; };
 		CE1236BE289864E200B86F03 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		CE1A5553289FBE1D00673015 /* ChatRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRootView.swift; sourceTree = "<group>"; };
+		CE1A5555289FF08300673015 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		CE1A5558289FF8D300673015 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CE1A555A289FFB1000673015 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		CE1A555D28A0016400673015 /* PhoneNumberCleanUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberCleanUp.swift; sourceTree = "<group>"; };
 		CE3A927C289C183700288DBE /* CreateProfileTextfieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileTextfieldStyle.swift; sourceTree = "<group>"; };
 		CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTabBar.swift; sourceTree = "<group>"; };
 		CE3DFA602896AC0400E5A960 /* RootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModel.swift; sourceTree = "<group>"; };
@@ -139,8 +147,17 @@
 				CEAA2AB628869E9B00A25647 /* Extensions.swift */,
 				7F78F9A928803DA200D27FDF /* CustomFonts.swift */,
 				7F23E255288063C3007CAD1F /* CustomTextField.swift */,
+				CE1A555D28A0016400673015 /* PhoneNumberCleanUp.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE1A5557289FF8A400673015 /* Chat Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE1A5558289FF8D300673015 /* User.swift */,
+			);
+			path = "Chat Model";
 			sourceTree = "<group>";
 		};
 		CE942F01289804B50051B317 /* Chat Views */ = {
@@ -157,6 +174,7 @@
 		CEAA2AB028859F0600A25647 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE1A5557289FF8A400673015 /* Chat Model */,
 				CEAA2AB128859F0600A25647 /* CourseSection.swift */,
 				CEAA2AB228859F0600A25647 /* Course.swift */,
 			);
@@ -198,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1236BE289864E200B86F03 /* AuthViewModel.swift */,
+				CE1A5555289FF08300673015 /* ContactsViewModel.swift */,
 			);
 			path = ChatViewModel;
 			sourceTree = "<group>";
@@ -288,6 +307,7 @@
 		CEF4976828947555007F60EE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CE1A555A289FFB1000673015 /* DatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -386,14 +406,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */,
+				CE1A5556289FF08300673015 /* ContactsViewModel.swift in Sources */,
 				CE1236BF289864E200B86F03 /* AuthViewModel.swift in Sources */,
 				CEAA2ABF288A80CB00A25647 /* HCard.swift in Sources */,
+				CE1A5559289FF8D300673015 /* User.swift in Sources */,
 				CEAA2AB428859F0700A25647 /* Course.swift in Sources */,
 				CE942F1228982F7F0051B317 /* AppDelegate.swift in Sources */,
 				CEAA2AC1288AA79100A25647 /* HomeView.swift in Sources */,
 				CEAA2AC3288D306200A25647 /* SideMenu.swift in Sources */,
 				CEE07F5B287D9D01008B6C62 /* OnboardingView.swift in Sources */,
 				CE942F05289806C60051B317 /* TabBarButton.swift in Sources */,
+				CE1A555B289FFB1000673015 /* DatabaseService.swift in Sources */,
 				CE1A5554289FBE1D00673015 /* ChatRootView.swift in Sources */,
 				7F78F9AA28803DA200D27FDF /* CustomFonts.swift in Sources */,
 				CEAB397F289A7F6000BCBD5B /* CreateProfileView.swift in Sources */,
@@ -408,6 +431,7 @@
 				CEAB397D289A7F4D00BCBD5B /* VerificationView.swift in Sources */,
 				CEAA2AB328859F0700A25647 /* CourseSection.swift in Sources */,
 				CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */,
+				CE1A555E28A0016400673015 /* PhoneNumberCleanUp.swift in Sources */,
 				CEAB3979289A7F2000BCBD5B /* WelcomeView.swift in Sources */,
 				7F5FDCBD2880557800EDCB28 /* SignInView.swift in Sources */,
 				CEAA2AAF288584E200A25647 /* TabBar.swift in Sources */,
@@ -549,6 +573,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Coming2Kz/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "Grant access to contacts to sync with App";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -581,6 +606,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Coming2Kz/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "Grant access to contacts to sync with App";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

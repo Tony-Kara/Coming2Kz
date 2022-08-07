@@ -26,6 +26,7 @@ struct Coming2KzApp: App {
         WindowGroup {
            RootView()
             .environmentObject(RootModel())
+            .environmentObject(ContactsViewModel())
         }
     }
 }
