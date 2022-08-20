@@ -14,6 +14,8 @@ struct WelcomeView: View {
           Spacer()
           
           Image("onboarding-welcome")
+          .resizable()
+          .scaledToFit()
           
           Text("Welcome to Chat App")
           .customFont(.title2)

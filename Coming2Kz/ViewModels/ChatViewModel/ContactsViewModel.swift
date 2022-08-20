@@ -15,18 +15,18 @@ class ContactsViewModel: ObservableObject {
     DispatchQueue.init(label: "getcontacts").async {
       do
       {
-          let store = CNContactStore()
-          let keys = [CNContactPhoneNumbersKey,
-                      CNContactGivenNameKey,
-                      CNContactFamilyNameKey] as [CNKeyDescriptor]
+        let store = CNContactStore()
+        let keys = [CNContactPhoneNumbersKey,
+                    CNContactGivenNameKey,
+                    CNContactFamilyNameKey] as [CNKeyDescriptor]
+        
+        let fetchRequest = CNContactFetchRequest(keysToFetch: keys)
+        try store.enumerateContacts(with: fetchRequest, usingBlock: { contact, success in
           
-          let fetchRequest = CNContactFetchRequest(keysToFetch: keys)
-          try store.enumerateContacts(with: fetchRequest, usingBlock: { contact, success in
-            
-            self.localContacts.append(contact)
-            
-            
-          })
+          self.localContacts.append(contact)
+          
+          
+        })
         DatabaseService().getPlatformUsers(localContacts: self.localContacts) { platformUsers in
           DispatchQueue.main.async {
             self.users = platformUsers
