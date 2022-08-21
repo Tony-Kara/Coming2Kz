@@ -8,6 +8,8 @@
 import Foundation
 import Contacts
 import Firebase
+import FirebaseStorage
+import UIKit
 
 class DatabaseService {
   
@@ -48,4 +50,48 @@ class DatabaseService {
     }
     
 }
+  
+  func setUserProfile(firstName: String, lastName: String, image: UIImage?, completion: @escaping(Bool) -> Void) {
+    
+    let db = Firestore.firestore()
+    let doc = db.collection("users").document()
+    doc.setData(["firstname" : firstName,
+                 "lastname" : lastName
+                
+                ])
+    
+    if let image = image {
+      // Create storage reference
+      let storageRef = Storage.storage().reference()
+      
+      // Turn our image into data
+      let imageData = image.jpegData(compressionQuality: 0.8)
+      
+      // Check that we were able to convert it to data
+      guard imageData != nil else {
+          return
+      }
+      
+      // Specify the file path and name
+      let path = "images/\(UUID().uuidString).jpg"
+      let fileRef = storageRef.child(path)
+      
+      let uploadTask = fileRef.putData(imageData!, metadata: nil) { meta , error in
+        
+        if error == nil && meta != nil {
+          
+          doc.setData(["photo": path], merge: true) { error in
+            if error == nil {
+              completion(true)
+            }
+            
+          }
+        }
+        else {
+          completion(false)
+        }
+      }
+      
+    }
+  }
 }

@@ -15,6 +15,9 @@ struct SyncContactsView: View {
           Spacer()
           
           Image("onboarding-all-set")
+          .resizable()
+          .scaledToFit()
+          
           
           Text("Awesome!")
           .customFont(.title2)
@@ -36,7 +39,7 @@ struct SyncContactsView: View {
               Text("Continue")
           }
           .buttonStyle(OnboardingButtonStyle())
-              .padding(.bottom, 87)
+          .padding(.bottom, 87)
 
           
       }

@@ -11,6 +11,10 @@ struct CreateProfileView: View {
   @State var firstName = ""
   @State var lastName = ""
   @State var selectedImage: UIImage?
+  @State var isPickerShowing = false
+  @State var isSourceDialogShowing = false
+  @State var source: UIImagePickerController.SourceType = .photoLibrary
+  @State var isSaveButtonDisabled = false
   @Binding var currentStep: OnboardingStep
     var body: some View {
       VStack {
@@ -28,7 +32,8 @@ struct CreateProfileView: View {
           
           Button {
               
-              
+            isSourceDialogShowing = true
+            
           } label: {
               
               ZStack {
@@ -68,16 +73,49 @@ struct CreateProfileView: View {
           Spacer()
           
           Button {
-            currentStep = .contact
+            isSaveButtonDisabled = true
+            
+            DatabaseService().setUserProfile(firstName: firstName, lastName: lastName, image: selectedImage) { isSuccess in
+              if isSuccess {
+                currentStep = .contact
+              }
+              else {
+              }
+              
+              isSaveButtonDisabled = false
+            }
           } label: {
-              Text("Next")
+            Text(isSaveButtonDisabled ? "Uploading" : "Save")
           }
           .buttonStyle(OnboardingButtonStyle())
+          .disabled(isSaveButtonDisabled)
           .padding(.bottom, 87)
 
           
       }
       .padding(.horizontal)
+      .confirmationDialog("From where?", isPresented: $isSourceDialogShowing, actions: {
+        // show image Picker
+        Button {
+          self.source = .photoLibrary
+          isPickerShowing = true
+        } label: {
+          Text("Photo Library")
+        }
+        // show user camera
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+        Button {
+          self.source = .camera
+          isPickerShowing = true
+        } label: {
+          Text("Take Photo")
+        }
+        }
+        
+      })
+      .sheet(isPresented: $isPickerShowing) {
+        ImagePicker(selectedImage: $selectedImage, isPickerShowing: $isPickerShowing, source: self.source)
+      }
     }
 }
 
