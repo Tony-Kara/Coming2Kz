@@ -53,11 +53,15 @@ class DatabaseService {
   
   func setUserProfile(firstName: String, lastName: String, image: UIImage?, completion: @escaping(Bool) -> Void) {
     
+    guard AuthViewModel.isUserLoggedIn() != false else {return}
+    
+    let userPhone = PhoneNumberCleanUp.sanitizePhoneNumber(AuthViewModel.getLoggedInUserPhone())
     let db = Firestore.firestore()
-    let doc = db.collection("users").document()
+    let doc = db.collection("users").document(AuthViewModel.getLoggedInUserId())
     doc.setData(["firstname" : firstName,
-                 "lastname" : lastName
-                
+                 "lastname" : lastName,
+                 "phone" : userPhone
+                 
                 ])
     
     if let image = image {
@@ -92,6 +96,25 @@ class DatabaseService {
         }
       }
       
+    }
+  }
+  
+  func checkUserProfile(completion: @escaping (Bool) -> Void) {
+    guard AuthViewModel.isUserLoggedIn() != false else {
+        return
+    }
+    let db = Firestore.firestore()
+    
+    db.collection("users").document(AuthViewModel.getLoggedInUserId()).getDocument { snapshot, error in
+       
+        if snapshot != nil && error == nil {
+            
+            completion(snapshot!.exists)
+        }
+        else {
+            completion(false)
+        }
+        
     }
   }
 }

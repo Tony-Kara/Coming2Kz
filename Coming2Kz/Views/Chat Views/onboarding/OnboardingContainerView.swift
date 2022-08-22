@@ -28,7 +28,7 @@ struct OnboardingContainerView: View {
         case .phoneNumber:
           PhoneNumberView(currentStep: $currentStep)
         case .verification:
-          VerificationView(currentStep: $currentStep)
+          VerificationView(currentStep: $currentStep, isOnboarding: $isOnboarding)
         case .profile:
           CreateProfileView(currentStep: $currentStep)
         case .contact:
