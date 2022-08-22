@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct PhoneNumberView: View {
   @State var phoneNumber = ""
@@ -25,12 +26,26 @@ struct PhoneNumberView: View {
                           .customFont(.subheadline)
                           .foregroundColor(.secondary)
                       TextField("e.g. +1 613 515 0123", text: $phoneNumber)
-                          .customTextField()
-                      
+                      .keyboardType(.numberPad)
+                      .customTextField()
+                      .onReceive(Just(phoneNumber)) { _ in
+                        PhoneNumberCleanUp.applyPatternOnNumbers(&phoneNumber, pattern: "+# (###) ###-####", replacementCharacter: "#")
+                      }
                   }
                   
                   Button {
-                    currentStep = .verification
+                  //  currentStep = .verification
+                    AuthViewModel.sendPhoneNumber(phone: phoneNumber) { error in
+
+                      if error == nil {
+
+                        currentStep = .verification
+                      }
+                      else {
+
+                      }
+                    }
+                    
                   } label: {
                       ZStack{
                           Rectangle()

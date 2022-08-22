@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct VerificationView: View {
   @State var verificationCode = ""
@@ -32,6 +33,9 @@ struct VerificationView: View {
                   TextField("", text: $verificationCode)
                   .customFont(.subheadline)
                   .keyboardType(.numberPad)
+                  .onReceive(Just(verificationCode)) { _ in
+                    PhoneNumberCleanUp.limitText(&verificationCode, 6)
+                  }
                       
                   Spacer()
                   
@@ -55,8 +59,18 @@ struct VerificationView: View {
           Spacer()
           
           Button {
+             
+            AuthViewModel.verifyCode(code: verificationCode) { error in
               
-            currentStep = .profile
+              if error == nil {
+                currentStep = .profile
+              }
+              else {
+                
+              }
+              
+            }
+            
               
               
               

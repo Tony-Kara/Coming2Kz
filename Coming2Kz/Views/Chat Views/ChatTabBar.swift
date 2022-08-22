@@ -42,6 +42,9 @@ struct ChatTabBar: View {
           ForEach(chatTabItems) { item in
             Button {
               selectedTab = item.tab
+              if selectedTab == .newChats {
+                AuthViewModel.logout()
+              }
             } label: {
               
               TabBarButton(selectedTab: $selectedTab, tabItem: item)
