@@ -47,6 +47,8 @@
 		CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */; };
 		CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */; };
 		CEC562EF28B23BB500A08C38 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562EE28B23BB500A08C38 /* ImagePicker.swift */; };
+		CEC562F928B3BFB800A08C38 /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562F828B3BFB800A08C38 /* ChatsListView.swift */; };
+		CEC562FB28B3BFC700A08C38 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562FA28B3BFC600A08C38 /* ContactsListView.swift */; };
 		CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */; };
 		CEE07F3D287D9840008B6C62 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F3C287D9840008B6C62 /* RootView.swift */; };
 		CEE07F42287D9848008B6C62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE07F41287D9848008B6C62 /* Preview Assets.xcassets */; };
@@ -99,6 +101,8 @@
 		CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsView.swift; sourceTree = "<group>"; };
 		CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
 		CEC562EE28B23BB500A08C38 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		CEC562F828B3BFB800A08C38 /* ChatsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
+		CEC562FA28B3BFC600A08C38 /* ContactsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
 		CEE07F37287D9840008B6C62 /* Coming2Kz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coming2Kz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coming2KzApp.swift; sourceTree = "<group>"; };
 		CEE07F3C287D9840008B6C62 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -165,10 +169,10 @@
 		CE942F01289804B50051B317 /* Chat Views */ = {
 			isa = PBXGroup;
 			children = (
-				CEAB3975289A7D6000BCBD5B /* onboarding */,
+				CEC562F728B3BF9F00A08C38 /* Chats View */,
+				CEC562F628B3BF9400A08C38 /* Contacts View */,
 				CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */,
 				CE942F04289806C60051B317 /* TabBarButton.swift */,
-				CE1A5553289FBE1D00673015 /* ChatRootView.swift */,
 			);
 			path = "Chat Views";
 			sourceTree = "<group>";
@@ -186,6 +190,8 @@
 		CEAA2AB528859F9E00A25647 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE1A5553289FBE1D00673015 /* ChatRootView.swift */,
+				CEAB3975289A7D6000BCBD5B /* onboarding */,
 				CE942F01289804B50051B317 /* Chat Views */,
 				CEAA2AC0288AA79100A25647 /* HomeView.swift */,
 				7F5FDCBC2880557800EDCB28 /* SignInView.swift */,
@@ -235,6 +241,22 @@
 				CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */,
 			);
 			path = onboarding;
+			sourceTree = "<group>";
+		};
+		CEC562F628B3BF9400A08C38 /* Contacts View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC562FA28B3BFC600A08C38 /* ContactsListView.swift */,
+			);
+			path = "Contacts View";
+			sourceTree = "<group>";
+		};
+		CEC562F728B3BF9F00A08C38 /* Chats View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC562F828B3BFB800A08C38 /* ChatsListView.swift */,
+			);
+			path = "Chats View";
 			sourceTree = "<group>";
 		};
 		CEE07F2E287D9840008B6C62 = {
@@ -410,6 +432,7 @@
 			files = (
 				CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */,
 				CE1A5556289FF08300673015 /* ContactsViewModel.swift in Sources */,
+				CEC562F928B3BFB800A08C38 /* ChatsListView.swift in Sources */,
 				CE1236BF289864E200B86F03 /* AuthViewModel.swift in Sources */,
 				CEC562EF28B23BB500A08C38 /* ImagePicker.swift in Sources */,
 				CEAA2ABF288A80CB00A25647 /* HCard.swift in Sources */,
@@ -438,6 +461,7 @@
 				CE1A555E28A0016400673015 /* PhoneNumberCleanUp.swift in Sources */,
 				CEAB3979289A7F2000BCBD5B /* WelcomeView.swift in Sources */,
 				7F5FDCBD2880557800EDCB28 /* SignInView.swift in Sources */,
+				CEC562FB28B3BFC700A08C38 /* ContactsListView.swift in Sources */,
 				CEAA2AAF288584E200A25647 /* TabBar.swift in Sources */,
 				CEAB397B289A7F3500BCBD5B /* PhoneNumberView.swift in Sources */,
 				CE3DFA612896AC0400E5A960 /* RootModel.swift in Sources */,
