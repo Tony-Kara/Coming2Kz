@@ -47,6 +47,9 @@
 		CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */; };
 		CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */; };
 		CEC1CC4628BE03B000409C50 /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4528BE03B000409C50 /* ContactRow.swift */; };
+		CEC1CC4828BE2E1700409C50 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4728BE2E1700409C50 /* ConversationView.swift */; };
+		CEC1CC4B28BE2E8400409C50 /* ProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4A28BE2E8400409C50 /* ProfilePicView.swift */; };
+		CEC1CC4D28BE5AA300409C50 /* RoundedCornerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4C28BE5AA200409C50 /* RoundedCornerExtension.swift */; };
 		CEC562EF28B23BB500A08C38 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562EE28B23BB500A08C38 /* ImagePicker.swift */; };
 		CEC562F928B3BFB800A08C38 /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562F828B3BFB800A08C38 /* ChatsListView.swift */; };
 		CEC562FB28B3BFC700A08C38 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562FA28B3BFC600A08C38 /* ContactsListView.swift */; };
@@ -102,6 +105,9 @@
 		CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsView.swift; sourceTree = "<group>"; };
 		CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
 		CEC1CC4528BE03B000409C50 /* ContactRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
+		CEC1CC4728BE2E1700409C50 /* ConversationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		CEC1CC4A28BE2E8400409C50 /* ProfilePicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicView.swift; sourceTree = "<group>"; };
+		CEC1CC4C28BE5AA200409C50 /* RoundedCornerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerExtension.swift; sourceTree = "<group>"; };
 		CEC562EE28B23BB500A08C38 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CEC562F828B3BFB800A08C38 /* ChatsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
 		CEC562FA28B3BFC600A08C38 /* ContactsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 				7F78F9A928803DA200D27FDF /* CustomFonts.swift */,
 				7F23E255288063C3007CAD1F /* CustomTextField.swift */,
 				CE1A555D28A0016400673015 /* PhoneNumberCleanUp.swift */,
+				CEC1CC4C28BE5AA200409C50 /* RoundedCornerExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 			children = (
 				CEC562F728B3BF9F00A08C38 /* Chats View */,
 				CEC562F628B3BF9400A08C38 /* Contacts View */,
+				CEC1CC4928BE2E8400409C50 /* Misc */,
 				CE3DFA5E28952B2700E5A960 /* ChatTabBar.swift */,
 				CE942F04289806C60051B317 /* TabBarButton.swift */,
 			);
@@ -245,6 +253,14 @@
 			path = onboarding;
 			sourceTree = "<group>";
 		};
+		CEC1CC4928BE2E8400409C50 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CEC1CC4A28BE2E8400409C50 /* ProfilePicView.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		CEC562F628B3BF9400A08C38 /* Contacts View */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC562F828B3BFB800A08C38 /* ChatsListView.swift */,
+				CEC1CC4728BE2E1700409C50 /* ConversationView.swift */,
 			);
 			path = "Chats View";
 			sourceTree = "<group>";
@@ -455,7 +472,10 @@
 				CEAB3977289A7DBA00BCBD5B /* OnboardingContainerView.swift in Sources */,
 				CEE07F3D287D9840008B6C62 /* RootView.swift in Sources */,
 				CEAA2AB928869F3000A25647 /* VCard.swift in Sources */,
+				CEC1CC4D28BE5AA300409C50 /* RoundedCornerExtension.swift in Sources */,
 				CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */,
+				CEC1CC4B28BE2E8400409C50 /* ProfilePicView.swift in Sources */,
+				CEC1CC4828BE2E1700409C50 /* ConversationView.swift in Sources */,
 				CE3A927D289C183700288DBE /* CreateProfileTextfieldStyle.swift in Sources */,
 				CEC1CC4628BE03B000409C50 /* ContactRow.swift in Sources */,
 				CEAA2AB728869E9B00A25647 /* Extensions.swift in Sources */,

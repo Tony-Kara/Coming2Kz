@@ -5,6 +5,8 @@ import SwiftUI
 struct ContactsListView: View {
     
     @EnvironmentObject var contactsViewModel: ContactsViewModel
+  
+    @Binding var isChatShowing: Bool
     
     @State var filterText = ""
     
@@ -51,10 +53,16 @@ struct ContactsListView: View {
             
                 // List
                 List(contactsViewModel.filteredUsers) { user in
-                    
+                  
+                  Button {
+                    isChatShowing = true
+                  } label: {
                     ContactRow(user: user)
-                    .listRowBackground(Color.clear)
-                    .listRowSeparator(.hidden)
+                  }
+                  .buttonStyle(.plain)
+                  .listRowBackground(Color.clear)
+                  .listRowSeparator(.hidden)
+
                 }
                 .listStyle(.plain)
                 .padding(.top, 12)
@@ -90,6 +98,6 @@ struct ContactsListView: View {
 
 struct ContactsListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactsListView()
+      ContactsListView(isChatShowing: .constant(true))
     }
 }

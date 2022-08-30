@@ -11,6 +11,7 @@ struct ChatRootView: View {
   @AppStorage("selectedChatTab") var selectedTab: Tabs = .home
   // @State var selectedTab: Tabs = .contacts
   @State var isOnboarding = !AuthViewModel.isUserLoggedIn()
+  @State var isChatShowing = false
   var body: some View {
     ZStack {
       Color("backgroundc").ignoresSafeArea()
@@ -24,9 +25,9 @@ struct ChatRootView: View {
             SignInView()
               .background(.white)
           case .contacts:
-            ChatsListView()
+            ContactsListView(isChatShowing: $isChatShowing)
           case .newChats:
-            ContactsListView()
+            ChatsListView()
           }
         }
         //          .safeAreaInset(edge: .bottom) {
@@ -56,6 +57,9 @@ struct ChatRootView: View {
     content: {
       // The onboarding flow
       OnboardingContainerView(isOnboarding: $isOnboarding)
+    }
+    .fullScreenCover(isPresented: $isChatShowing, onDismiss: nil) {
+      ConversationView(isChatShowing: $isChatShowing)
     }
     }
   }
