@@ -63,6 +63,8 @@ struct ContactsListView: View {
                 Spacer()
                 
                 Image("no-contacts-yet")
+                .resizable()
+                .scaledToFit()
                 
                 Text("Hmm... Zero contacts?")
                 .customFont(.title2)
@@ -79,9 +81,9 @@ struct ContactsListView: View {
             
         }
         .padding(.horizontal)
-        .onAppear {
-         //   contactsViewModel.getLocalContacts()
-        }
+//        .onAppear {
+//         //   contactsViewModel.getLocalContacts()
+//        }
     }
 }
 

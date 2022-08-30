@@ -17,6 +17,7 @@ struct TabBarButton: View {
         .resizable()
         .scaledToFit()
         .frame(width: 24, height: 24)
+        .opacity(selectedTab == tabItem.tab ? 1 : 0.5)
       
       Text(tabItem.buttonText)
         .customFont(.caption2)
