@@ -1,9 +1,4 @@
-//
-//  ContactsListView.swift
-//  swiftui-chat
-//
-//  Created by Chris Ching on 2022-01-27.
-//
+
 
 import SwiftUI
 
@@ -47,16 +42,22 @@ struct ContactsListView: View {
                     .padding()
             }
             .frame(height: 46)
+            .onChange(of: filterText) { _ in
+              contactsViewModel.filterContacts(filterBy: filterText.lowercased()
+                                                .trimmingCharacters(in: .whitespacesAndNewlines))
+            }
             
-            if contactsViewModel.users.count > 0 {
+            if contactsViewModel.filteredUsers.count > 0 {
             
                 // List
-                List(contactsViewModel.users) { user in
+                List(contactsViewModel.filteredUsers) { user in
                     
-                    // TODO: Display rows
-                    Text(user.firstname ?? "Test User")
+                    ContactRow(user: user)
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
+                .padding(.top, 12)
             }
             else {
                 

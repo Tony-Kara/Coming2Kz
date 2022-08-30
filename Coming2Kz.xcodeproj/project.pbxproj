@@ -46,6 +46,7 @@
 		CEAB397F289A7F6000BCBD5B /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB397E289A7F6000BCBD5B /* CreateProfileView.swift */; };
 		CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */; };
 		CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */; };
+		CEC1CC4628BE03B000409C50 /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4528BE03B000409C50 /* ContactRow.swift */; };
 		CEC562EF28B23BB500A08C38 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562EE28B23BB500A08C38 /* ImagePicker.swift */; };
 		CEC562F928B3BFB800A08C38 /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562F828B3BFB800A08C38 /* ChatsListView.swift */; };
 		CEC562FB28B3BFC700A08C38 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562FA28B3BFC600A08C38 /* ContactsListView.swift */; };
@@ -100,6 +101,7 @@
 		CEAB397E289A7F6000BCBD5B /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
 		CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsView.swift; sourceTree = "<group>"; };
 		CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
+		CEC1CC4528BE03B000409C50 /* ContactRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
 		CEC562EE28B23BB500A08C38 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CEC562F828B3BFB800A08C38 /* ChatsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
 		CEC562FA28B3BFC600A08C38 /* ContactsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC562FA28B3BFC600A08C38 /* ContactsListView.swift */,
+				CEC1CC4528BE03B000409C50 /* ContactRow.swift */,
 			);
 			path = "Contacts View";
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				CEAA2AB928869F3000A25647 /* VCard.swift in Sources */,
 				CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */,
 				CE3A927D289C183700288DBE /* CreateProfileTextfieldStyle.swift in Sources */,
+				CEC1CC4628BE03B000409C50 /* ContactRow.swift in Sources */,
 				CEAA2AB728869E9B00A25647 /* Extensions.swift in Sources */,
 				CEAB397D289A7F4D00BCBD5B /* VerificationView.swift in Sources */,
 				CEAA2AB328859F0700A25647 /* CourseSection.swift in Sources */,
