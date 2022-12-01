@@ -46,6 +46,7 @@
 		CEAB397F289A7F6000BCBD5B /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB397E289A7F6000BCBD5B /* CreateProfileView.swift */; };
 		CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */; };
 		CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */; };
+		CEB3C1AA2938FFDE00904E69 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C1A92938FFDE00904E69 /* ChatViewModel.swift */; };
 		CEC1CC4628BE03B000409C50 /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4528BE03B000409C50 /* ContactRow.swift */; };
 		CEC1CC4828BE2E1700409C50 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4728BE2E1700409C50 /* ConversationView.swift */; };
 		CEC1CC4B28BE2E8400409C50 /* ProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4A28BE2E8400409C50 /* ProfilePicView.swift */; };
@@ -65,6 +66,7 @@
 		CEE07F56287D9B91008B6C62 /* icons.riv in Resources */ = {isa = PBXBuildFile; fileRef = CEE07F4F287D9B90008B6C62 /* icons.riv */; };
 		CEE07F59287D9CCA008B6C62 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CEE07F58287D9CCA008B6C62 /* RiveRuntime */; };
 		CEE07F5B287D9D01008B6C62 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */; };
+		CEE5B4BB290A81E700371FA8 /* chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5B4BA290A81E700371FA8 /* chat.swift */; };
 		CEF4976628946FE3007F60EE /* iconnew.riv in Resources */ = {isa = PBXBuildFile; fileRef = CEF4976528946FE3007F60EE /* iconnew.riv */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +106,7 @@
 		CEAB397E289A7F6000BCBD5B /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
 		CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsView.swift; sourceTree = "<group>"; };
 		CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
+		CEB3C1A92938FFDE00904E69 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		CEC1CC4528BE03B000409C50 /* ContactRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
 		CEC1CC4728BE2E1700409C50 /* ConversationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		CEC1CC4A28BE2E8400409C50 /* ProfilePicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicView.swift; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 		CEE07F4F287D9B90008B6C62 /* icons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.riv; sourceTree = "<group>"; };
 		CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		CEE07F5C28816C1D008B6C62 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		CEE5B4BA290A81E700371FA8 /* chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chat.swift; sourceTree = "<group>"; };
 		CEF4976528946FE3007F60EE /* iconnew.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconnew.riv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1A5558289FF8D300673015 /* User.swift */,
+				CEE5B4BA290A81E700371FA8 /* chat.swift */,
 			);
 			path = "Chat Model";
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 			children = (
 				CE1236BE289864E200B86F03 /* AuthViewModel.swift */,
 				CE1A5555289FF08300673015 /* ContactsViewModel.swift */,
+				CEB3C1A92938FFDE00904E69 /* ChatViewModel.swift */,
 			);
 			path = ChatViewModel;
 			sourceTree = "<group>";
@@ -472,6 +478,7 @@
 				CEAB3977289A7DBA00BCBD5B /* OnboardingContainerView.swift in Sources */,
 				CEE07F3D287D9840008B6C62 /* RootView.swift in Sources */,
 				CEAA2AB928869F3000A25647 /* VCard.swift in Sources */,
+				CEB3C1AA2938FFDE00904E69 /* ChatViewModel.swift in Sources */,
 				CEC1CC4D28BE5AA300409C50 /* RoundedCornerExtension.swift in Sources */,
 				CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */,
 				CEC1CC4B28BE2E8400409C50 /* ProfilePicView.swift in Sources */,
@@ -485,6 +492,7 @@
 				CE1A555E28A0016400673015 /* PhoneNumberCleanUp.swift in Sources */,
 				CEAB3979289A7F2000BCBD5B /* WelcomeView.swift in Sources */,
 				7F5FDCBD2880557800EDCB28 /* SignInView.swift in Sources */,
+				CEE5B4BB290A81E700371FA8 /* chat.swift in Sources */,
 				CEC562FB28B3BFC700A08C38 /* ContactsListView.swift in Sources */,
 				CEAA2AAF288584E200A25647 /* TabBar.swift in Sources */,
 				CEAB397B289A7F3500BCBD5B /* PhoneNumberView.swift in Sources */,
@@ -547,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -602,7 +610,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -631,7 +639,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -664,7 +672,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

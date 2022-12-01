@@ -45,6 +45,7 @@ struct Coming2KzApp: App {
            RootView()
             .environmentObject(RootModel())
             .environmentObject(ContactsViewModel())
+            .environmentObject(ChatViewModel())
         }
     }
 }

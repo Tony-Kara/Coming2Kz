@@ -43,7 +43,7 @@ struct ChatTabBar: View {
             Button {
               selectedTab = item.tab
               if selectedTab == .chats {
-                AuthViewModel.logout()
+               // AuthViewModel.logout()
               }
             } label: {
               
