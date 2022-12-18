@@ -212,4 +212,19 @@ class DatabaseService {
       
   }
   
+  func sendMessage(msg: String, chat: Chat) {
+      
+      guard chat.id != nil else {
+          return
+      }
+      
+      let db = Firestore.firestore()
+      db.collection("chats")
+          .document(chat.id!)
+          .collection("msgs")
+          .addDocument(data: ["imageurl": "",
+                              "msg": msg,
+                              "senderid": AuthViewModel.getLoggedInUserId(),
+                              "timestamp": Date()])
+  }
 }

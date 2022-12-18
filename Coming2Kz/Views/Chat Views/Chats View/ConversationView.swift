@@ -2,13 +2,15 @@ import SwiftUI
 
 struct ConversationView: View {
     
+    @EnvironmentObject var chatViewModel: ChatViewModel
+  
     @Binding var isChatShowing: Bool
     
     @State var chatMessage = ""
     
     var body: some View {
         
-        VStack {
+      VStack (spacing: 0) {
             
             // Chat header
             HStack {
@@ -46,31 +48,14 @@ struct ConversationView: View {
             ScrollView {
                 
                 VStack (spacing: 24) {
+                  
+                  ForEach (chatViewModel.messages) { msg in
                     
-                    // Their message
-                    HStack {
-                        
-                        // Message
-                        Text("Lorem ipsum dolor sit amet")
-                        .customFont(.subheadline)
-                            .foregroundColor(Color("text-primary"))
-                            .padding(.vertical, 16)
-                            .padding(.horizontal, 24)
-                            .background(Color("bubble-secondary"))
-                            .cornerRadius(30, corners: [.topLeft, .topRight, .bottomRight])
-                        
-                        Spacer()
-                        
-                        // Timestamp
-                        Text("9:41")
-                        .customFont(.caption)
-                            .foregroundColor(Color("text-timestamp"))
-                            .padding(.leading)
-                    }
+                    let isFromUser = msg.senderid == AuthViewModel.getLoggedInUserId()
                     
-                    // Your message
                     HStack {
-                        
+                      
+                      if isFromUser {
                         // Timestamp
                         Text("9:41")
                         .customFont(.caption)
@@ -78,17 +63,28 @@ struct ConversationView: View {
                             .padding(.trailing)
                         
                         Spacer()
+                      }
+                      // Message
+                      Text(msg.msg)
+                      .customFont(.subheadline)
+                      .foregroundColor(isFromUser ? Color("text-button") : Color("text-primary"))
+                          .padding(.vertical, 16)
+                          .padding(.horizontal, 24)
+                          .background(isFromUser ? Color("bubble-primary") : Color("bubble-secondary"))
+                          .cornerRadius(30, corners: isFromUser ? [.topLeft, .topRight, .bottomLeft] : [.topLeft, .topRight, .bottomRight])
+                      
+                      if !isFromUser {
+                        Spacer()
                         
-                        // Message
-                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam")
-                        .customFont(.subheadline)
-                            .foregroundColor(Color("text-button"))
-                            .padding(.vertical, 16)
-                            .padding(.horizontal, 24)
-                            .background(Color("bubble-primary"))
-                            .cornerRadius(30, corners: [.topLeft, .topRight, .bottomLeft])
-                        
+                        // Timestamp
+                        Text("9:41")
+                        .customFont(.caption)
+                            .foregroundColor(Color("text-timestamp"))
+                            .padding(.leading)
+                      }
                     }
+                  }
+                  
                     
                     
                 }
@@ -103,7 +99,7 @@ struct ConversationView: View {
                 Color("backgroundc")
                     .ignoresSafeArea()
                 
-                HStack {
+              HStack (spacing: 15) {
                     // Camera button
                     Button {
                         // TODO: Show picker
@@ -151,7 +147,8 @@ struct ConversationView: View {
                     
                     // Send button
                     Button {
-                        // TODO: Send message
+                      chatViewModel.sendMessage(msg: chatMessage)
+                      chatMessage = ""
                     } label: {
                         Image(systemName: "paperplane.fill")
                             .resizable()
@@ -165,7 +162,9 @@ struct ConversationView: View {
             }
             .frame(height: 76)
         }
-        
+      .onAppear {
+        chatViewModel.getMessages()
+      }
         
     }
 }

@@ -27,7 +27,7 @@ struct ChatRootView: View {
           case .contacts:
             ContactsListView(isChatShowing: $isChatShowing)
           case .newChats:
-            ChatsListView()
+            ChatsListView(isChatShowing: $isChatShowing)
           }
         }
         //          .safeAreaInset(edge: .bottom) {
