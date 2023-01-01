@@ -69,4 +69,20 @@ class ContactsViewModel: ObservableObject {
          
       })
   }
+  
+  func getParticipants(ids: [String]) -> [User] {
+    
+      let foundUsers = users.filter { user in
+          
+          if user.id == nil {
+              return false
+          }
+          else {
+              return ids.contains(user.id!)
+          }
+              
+      }
+      
+      return foundUsers
+  }
 }

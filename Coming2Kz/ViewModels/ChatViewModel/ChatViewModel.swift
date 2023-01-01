@@ -37,5 +37,17 @@ class ChatViewModel: ObservableObject {
     databaseService.sendMessage(msg: msg, chat: selectedChat!)
   }
 
+  func getParticipantIds() -> [String] {
+    
+      guard selectedChat != nil else {
+          return [String]()
+      }
+
+      let ids = selectedChat!.participantids.filter { id in
+          id != AuthViewModel.getLoggedInUserId()
+      }
+      
+      return ids
+  }
   
 }

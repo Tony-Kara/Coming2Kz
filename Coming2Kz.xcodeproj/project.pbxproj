@@ -67,6 +67,7 @@
 		CEE07F59287D9CCA008B6C62 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CEE07F58287D9CCA008B6C62 /* RiveRuntime */; };
 		CEE07F5B287D9D01008B6C62 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */; };
 		CEE5B4BB290A81E700371FA8 /* chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE5B4BA290A81E700371FA8 /* chat.swift */; };
+		CEEA82AD29620EBE00D5D4A6 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEA82AC29620EBE00D5D4A6 /* DateHelper.swift */; };
 		CEF4976628946FE3007F60EE /* iconnew.riv in Resources */ = {isa = PBXBuildFile; fileRef = CEF4976528946FE3007F60EE /* iconnew.riv */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +129,7 @@
 		CEE07F5A287D9D01008B6C62 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		CEE07F5C28816C1D008B6C62 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		CEE5B4BA290A81E700371FA8 /* chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chat.swift; sourceTree = "<group>"; };
+		CEEA82AC29620EBE00D5D4A6 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		CEF4976528946FE3007F60EE /* iconnew.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconnew.riv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 			children = (
 				CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */,
 				CE3A927C289C183700288DBE /* CreateProfileTextfieldStyle.swift */,
+				CEEA82AC29620EBE00D5D4A6 /* DateHelper.swift */,
 				CEAA2AB628869E9B00A25647 /* Extensions.swift */,
 				7F78F9A928803DA200D27FDF /* CustomFonts.swift */,
 				7F23E255288063C3007CAD1F /* CustomTextField.swift */,
@@ -467,6 +470,7 @@
 				CE942F1228982F7F0051B317 /* AppDelegate.swift in Sources */,
 				CEAA2AC1288AA79100A25647 /* HomeView.swift in Sources */,
 				CEAA2AC3288D306200A25647 /* SideMenu.swift in Sources */,
+				CEEA82AD29620EBE00D5D4A6 /* DateHelper.swift in Sources */,
 				CEE07F5B287D9D01008B6C62 /* OnboardingView.swift in Sources */,
 				CE942F05289806C60051B317 /* TabBarButton.swift in Sources */,
 				CE1A555B289FFB1000673015 /* DatabaseService.swift in Sources */,
