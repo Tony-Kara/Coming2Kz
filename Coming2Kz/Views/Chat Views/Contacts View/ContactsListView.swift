@@ -5,6 +5,7 @@ import SwiftUI
 struct ContactsListView: View {
     
     @EnvironmentObject var contactsViewModel: ContactsViewModel
+    @EnvironmentObject var chatViewModel: ChatViewModel
   
     @Binding var isChatShowing: Bool
     
@@ -55,6 +56,7 @@ struct ContactsListView: View {
                 List(contactsViewModel.filteredUsers) { user in
                   
                   Button {
+                    chatViewModel.getChatFor(contact: user)
                     isChatShowing = true
                   } label: {
                     ContactRow(user: user)

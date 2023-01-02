@@ -25,6 +25,46 @@ class ChatViewModel: ObservableObject {
     }
   }
   
+  func getChatFor(contact: User) {
+
+      guard contact.id != nil else {
+          return
+      }
+      
+      let foundChat = chats.filter { chat in
+          
+          return chat.numparticipants == 2 && chat.participantids.contains(contact.id!)
+      }
+
+      if !foundChat.isEmpty {
+
+          self.selectedChat = foundChat.first!
+  
+          getMessages()
+      }
+      else {
+  
+          var newChat = Chat(id: nil,
+                             numparticipants: 2,
+                             participantids: [AuthViewModel.getLoggedInUserId(), contact.id!],
+                             lastmsg: nil, updated: nil, msgs: nil)
+ 
+          self.selectedChat = newChat
+      
+          databaseService.createChat(chat: newChat) { docId in
+         
+              self.selectedChat = Chat(id: docId,
+                                       numparticipants: 2,
+                                       participantids: [AuthViewModel.getLoggedInUserId(), contact.id!],
+                                       lastmsg: nil, updated: nil, msgs: nil)
+ 
+              self.chats.append(self.selectedChat!)
+          }
+          
+          
+      }
+  }
+  
   func getMessages() {
     guard selectedChat != nil else { return }
     databaseService.getAllMessages(chat: selectedChat!) { msgs in
