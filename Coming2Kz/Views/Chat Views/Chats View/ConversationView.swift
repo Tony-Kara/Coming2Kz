@@ -54,55 +54,64 @@ struct ConversationView: View {
             .frame(height: 104)
             
             // Chat log
-            ScrollView {
-                
-                VStack (spacing: 24) {
-                  
-                  ForEach (chatViewModel.messages) { msg in
-                    
-                    let isFromUser = msg.senderid == AuthViewModel.getLoggedInUserId()
-                    
-                    HStack {
-                      
-                      if isFromUser {
-                        // Timestamp
-                        Text(DateHelper.chatTimestampFrom(date: msg.timestamp))
-                        .customFont(.caption)
-                            .foregroundColor(Color("text-timestamp"))
-                            .padding(.trailing)
-                        
-                        Spacer()
-                      }
-                      // Message
-                      Text(msg.msg)
-                      .customFont(.subheadline)
-                      .foregroundColor(isFromUser ? Color("text-button") : Color("text-primary"))
-                          .padding(.vertical, 16)
-                          .padding(.horizontal, 24)
-                          .background(isFromUser ? Color("bubble-primary") : Color("bubble-secondary"))
-                          .cornerRadius(30, corners: isFromUser ? [.topLeft, .topRight, .bottomLeft] : [.topLeft, .topRight, .bottomRight])
-                      
-                      if !isFromUser {
-                        Spacer()
-                        
-                        // Timestamp
-                        Text(DateHelper.chatTimestampFrom(date: msg.timestamp))
-                        .customFont(.caption)
-                            .foregroundColor(Color("text-timestamp"))
-                            .padding(.leading)
-                      }
-                    }
-                  }
-                  
-                    
-                    
-                }
-                .padding(.horizontal)
-                .padding(.top, 24)
-                
-            }
-            .background(Color("backgroundc"))
+        ScrollViewReader { proxy in
+          ScrollView {
             
+            VStack (spacing: 24) {
+              
+              ForEach (Array(chatViewModel.messages.enumerated()), id: \.element) { index, msg in
+                
+                let isFromUser = msg.senderid == AuthViewModel.getLoggedInUserId()
+                
+                HStack {
+                  
+                  if isFromUser {
+                    // Timestamp
+                    Text(DateHelper.chatTimestampFrom(date: msg.timestamp))
+                      .customFont(.caption)
+                      .foregroundColor(Color("text-timestamp"))
+                      .padding(.trailing)
+                    
+                    Spacer()
+                  }
+                  // Message
+                  Text(msg.msg)
+                    .customFont(.subheadline)
+                    .foregroundColor(isFromUser ? Color("text-button") : Color("text-primary"))
+                    .padding(.vertical, 16)
+                    .padding(.horizontal, 24)
+                    .background(isFromUser ? Color("bubble-primary") : Color("bubble-secondary"))
+                    .cornerRadius(30, corners: isFromUser ? [.topLeft, .topRight, .bottomLeft] : [.topLeft, .topRight, .bottomRight])
+                  
+                  if !isFromUser {
+                    Spacer()
+                    
+                    // Timestamp
+                    Text(DateHelper.chatTimestampFrom(date: msg.timestamp))
+                      .customFont(.caption)
+                      .foregroundColor(Color("text-timestamp"))
+                      .padding(.leading)
+                  }
+                }
+                .id(index)
+              }
+              
+              
+              
+            }
+            .padding(.horizontal)
+            .padding(.top, 24)
+            
+          }
+          .background(Color("backgroundc"))
+          .onChange(of: chatViewModel.messages.count) { newCount in
+            withAnimation {
+              proxy.scrollTo(newCount - 1)
+            }
+            
+          }
+          
+        }
             // Chat message bar
             ZStack {
                 Color("backgroundc")
@@ -175,6 +184,9 @@ struct ConversationView: View {
         chatViewModel.getMessages()
         let ids = chatViewModel.getParticipantIds()
         self.participants = contactsViewModel.getParticipants(ids: ids)
+      }
+      .onDisappear {
+        chatViewModel.conversationViewCleanup()
       }
         
     }

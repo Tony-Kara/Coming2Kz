@@ -76,6 +76,14 @@ class ChatViewModel: ObservableObject {
     guard selectedChat != nil else { return }
     databaseService.sendMessage(msg: msg, chat: selectedChat!)
   }
+  
+  func conversationViewCleanup() {
+    databaseService.detachConversationViewListeners()
+  }
+  
+  func chatListViewCleanup() {
+    databaseService.detachChatListViewListeners()
+  }
 
   func getParticipantIds() -> [String] {
     
