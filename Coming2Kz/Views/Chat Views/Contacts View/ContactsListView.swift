@@ -14,7 +14,6 @@ struct ContactsListView: View {
     var body: some View {
         
         VStack {
-            // Heading
             HStack {
                 Text("Contacts")
                 .customFont(.largeTitle)

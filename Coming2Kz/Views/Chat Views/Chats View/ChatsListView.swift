@@ -10,22 +10,67 @@ import SwiftUI
 struct ChatsListView: View {
   
   @EnvironmentObject var chatViewModel: ChatViewModel
+  @EnvironmentObject var contactsViewModel: ContactsViewModel
+  
   @Binding var isChatShowing: Bool
     var body: some View {
-      if chatViewModel.chats.count > 0 {
-        List(chatViewModel.chats) { chat in
-          Button {
-            chatViewModel.selectedChat = chat
-            isChatShowing = true
+      VStack {
+        HStack {
+            Text("Chats")
+            .customFont(.largeTitle)
             
-          } label: {
-            Text(chat.id ?? "empty chat id")
+            Spacer()
+            
+            Button {
+                // TODO: Settings
+            } label: {
+                Image(systemName: "gearshape.fill")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                    .tint(Color("icons-secondary"))
+            }
+            
+        }
+        .padding(.top, 20)
+        .padding(.horizontal)
+        
+        if chatViewModel.chats.count > 0 {
+          List(chatViewModel.chats) { chat in
+            Button {
+              chatViewModel.selectedChat = chat
+              isChatShowing = true
+              
+            } label: {
+              ChatsListRow(chat: chat, otherParticipants: contactsViewModel.getParticipants(ids: chat.participantids))
+            }
+            .buttonStyle(.plain)
+            .listRowBackground(Color.clear)
+            .listRowSeparator(.hidden)
           }
+          .listStyle(.plain)
+          
+        }
+        else {
+          Spacer()
+          
+          Image("no-chats-yet")
+          .resizable()
+          .scaledToFit()
+          
+          Text("Hmm... no chats here yet!")
+          .customFont(.title2)
+              .padding(.top, 32)
+          
+          Text("chat a friend to get started")
+          .customFont(.subheadline)
+              .padding(.top, 8)
+          
+          
+          Spacer()
         }
       }
-      else {
-        
-      }
+      
+     
     }
 }
 

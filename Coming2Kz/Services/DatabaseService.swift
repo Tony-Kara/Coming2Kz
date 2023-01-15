@@ -217,6 +217,7 @@ class DatabaseService {
       guard chat.id != nil else {
           return
       }
+    
       
       let db = Firestore.firestore()
       db.collection("chats")
@@ -226,6 +227,11 @@ class DatabaseService {
                               "msg": msg,
                               "senderid": AuthViewModel.getLoggedInUserId(),
                               "timestamp": Date()])
+    
+    db.collection("chats")
+      .document(chat.id!)
+      .setData(["updated": chat.updated,
+                "lastmsg": chat.lastmsg], merge: true)
   }
   
   func createChat(chat: Chat, completion: @escaping (String) -> Void) {

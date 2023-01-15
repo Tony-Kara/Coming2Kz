@@ -54,6 +54,7 @@
 		CEC562EF28B23BB500A08C38 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562EE28B23BB500A08C38 /* ImagePicker.swift */; };
 		CEC562F928B3BFB800A08C38 /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562F828B3BFB800A08C38 /* ChatsListView.swift */; };
 		CEC562FB28B3BFC700A08C38 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC562FA28B3BFC600A08C38 /* ContactsListView.swift */; };
+		CED0972029741B310089E25C /* ChatsListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0971F29741B310089E25C /* ChatsListRow.swift */; };
 		CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */; };
 		CEE07F3D287D9840008B6C62 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE07F3C287D9840008B6C62 /* RootView.swift */; };
 		CEE07F42287D9848008B6C62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE07F41287D9848008B6C62 /* Preview Assets.xcassets */; };
@@ -115,6 +116,7 @@
 		CEC562EE28B23BB500A08C38 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CEC562F828B3BFB800A08C38 /* ChatsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
 		CEC562FA28B3BFC600A08C38 /* ContactsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
+		CED0971F29741B310089E25C /* ChatsListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListRow.swift; sourceTree = "<group>"; };
 		CEE07F37287D9840008B6C62 /* Coming2Kz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coming2Kz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE07F3A287D9840008B6C62 /* Coming2KzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coming2KzApp.swift; sourceTree = "<group>"; };
 		CEE07F3C287D9840008B6C62 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			children = (
 				CEC562F828B3BFB800A08C38 /* ChatsListView.swift */,
 				CEC1CC4728BE2E1700409C50 /* ConversationView.swift */,
+				CED0971F29741B310089E25C /* ChatsListRow.swift */,
 			);
 			path = "Chats View";
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED0972029741B310089E25C /* ChatsListRow.swift in Sources */,
 				CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */,
 				CE1A5556289FF08300673015 /* ContactsViewModel.swift in Sources */,
 				CEC562F928B3BFB800A08C38 /* ChatsListView.swift in Sources */,
