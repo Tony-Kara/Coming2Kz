@@ -21,10 +21,6 @@ struct ChatsListView: View {
           } label: {
             Text(chat.id ?? "empty chat id")
           }
-
-          
-          
-          
         }
       }
       else {
