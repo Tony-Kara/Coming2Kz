@@ -42,8 +42,8 @@ struct ChatTabBar: View {
           ForEach(chatTabItems) { item in
             Button {
               selectedTab = item.tab
-              if selectedTab == .chats {
-               // AuthViewModel.logout()
+              if selectedTab == .home {
+              //  AuthViewModel.logout()
               }
             } label: {
               
