@@ -10,6 +10,7 @@ import SwiftUI
 struct ChatRootView: View {
   @Environment(\.scenePhase) var scenePhase
   @EnvironmentObject var chatViewModel: ChatViewModel
+  @EnvironmentObject var contactsViewModel: ContactsViewModel
   @AppStorage("selectedChatTab") var selectedTab: Tabs = .home
   // @State var selectedTab: Tabs = .contacts
   @State var isOnboarding = !AuthViewModel.isUserLoggedIn()
@@ -76,9 +77,13 @@ struct ChatRootView: View {
       }
     }
     }
+    .onAppear {
+      if !isOnboarding {
+        contactsViewModel.getLocalContact()
+      }
+    }
   }
 }
-
 struct ChatRootView_Previews: PreviewProvider {
   static var previews: some View {
     ChatRootView()

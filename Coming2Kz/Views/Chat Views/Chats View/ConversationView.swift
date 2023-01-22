@@ -165,8 +165,8 @@ struct ConversationView: View {
                     
                     // Send button
                     Button {
+                      chatMessage = chatMessage.trimmingCharacters(in: .whitespacesAndNewlines)
                       chatViewModel.sendMessage(msg: chatMessage)
-                      chatMessage = ""
                     } label: {
                         Image(systemName: "paperplane.fill")
                             .resizable()
@@ -174,6 +174,7 @@ struct ConversationView: View {
                             .frame(width: 24, height: 24)
                             .tint(Color("icons-primary"))
                     }
+                    .disabled(chatMessage.trimmingCharacters(in: .whitespacesAndNewlines) == "")
 
                 }
                 .padding(.horizontal)

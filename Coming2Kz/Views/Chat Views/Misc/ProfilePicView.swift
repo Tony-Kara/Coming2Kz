@@ -2,7 +2,7 @@
 //  ProfilePicView.swift
 //  swiftui-chat
 //
-//  Created by Chris Ching on 2022-02-01.
+//  Created by Tony Eniola on 2022-02-01.
 //
 
 import SwiftUI
@@ -27,38 +27,45 @@ struct ProfilePicView: View {
                 
             }
             else {
-                
+              if let cachedImage = CacheService.getImage(forKey: user.photo!) {
+                  cachedImage
+                      .resizable()
+                      .clipShape(Circle())
+                      .scaledToFill()
+                      .clipped()
+              }
+              else {
                 let photoUrl = URL(string: user.photo ?? "")
-                AsyncImage(url: photoUrl) { phase in
-                    
-                    switch phase {
-                        
-                    case .empty:
-                        // Currently fetching
-                        ProgressView()
-                        
-                    case .success(let image):
-                        // Display the fetched image
-                        image
-                            .resizable()
-                            .clipShape(Circle())
-                            .scaledToFill()
-                            .clipped()
-                        
-                    case .failure:
-                        // Couldn't fetch profile photo
-                        // Display circle with first letter of first name
-                        
-                        ZStack {
-                            Circle()
-                                .foregroundColor(.white)
-                            
-                            Text(user.firstname?.prefix(1) ?? "")
-                                .bold()
-                        }
-                    }
-                    
-                }
+                  AsyncImage(url: photoUrl) { phase in
+                      
+                      switch phase {
+                          
+                      case .empty:
+                          ProgressView()
+                          
+                      case .success(let image):
+                          image
+                              .resizable()
+                              .clipShape(Circle())
+                              .scaledToFill()
+                              .clipped()
+                              .onAppear {
+                                  CacheService.setImage(image: image,
+                                                        forKey: user.photo!)
+                              }
+                          
+                      case .failure:
+                          ZStack {
+                              Circle()
+                                  .foregroundColor(.white)
+                              
+                              Text(user.firstname?.prefix(1) ?? "")
+                                  .bold()
+                          }
+                      }
+                      
+                  }
+              }
                 
             }
             

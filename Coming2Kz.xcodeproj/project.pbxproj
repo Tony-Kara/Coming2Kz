@@ -47,6 +47,7 @@
 		CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */; };
 		CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */; };
 		CEB3C1AA2938FFDE00904E69 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C1A92938FFDE00904E69 /* ChatViewModel.swift */; };
+		CEBD7A25297D949D008B6456 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD7A24297D949D008B6456 /* CacheService.swift */; };
 		CEC1CC4628BE03B000409C50 /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4528BE03B000409C50 /* ContactRow.swift */; };
 		CEC1CC4828BE2E1700409C50 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4728BE2E1700409C50 /* ConversationView.swift */; };
 		CEC1CC4B28BE2E8400409C50 /* ProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4A28BE2E8400409C50 /* ProfilePicView.swift */; };
@@ -109,6 +110,7 @@
 		CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsView.swift; sourceTree = "<group>"; };
 		CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
 		CEB3C1A92938FFDE00904E69 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		CEBD7A24297D949D008B6456 /* CacheService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
 		CEC1CC4528BE03B000409C50 /* ContactRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
 		CEC1CC4728BE2E1700409C50 /* ConversationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		CEC1CC4A28BE2E8400409C50 /* ProfilePicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicView.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 		CEF4976828947555007F60EE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CEBD7A24297D949D008B6456 /* CacheService.swift */,
 				CE1A555A289FFB1000673015 /* DatabaseService.swift */,
 			);
 			path = Services;
@@ -496,6 +499,7 @@
 				CEAA2AB728869E9B00A25647 /* Extensions.swift in Sources */,
 				CEAB397D289A7F4D00BCBD5B /* VerificationView.swift in Sources */,
 				CEAA2AB328859F0700A25647 /* CourseSection.swift in Sources */,
+				CEBD7A25297D949D008B6456 /* CacheService.swift in Sources */,
 				CEE07F3B287D9840008B6C62 /* Coming2KzApp.swift in Sources */,
 				CE1A555E28A0016400673015 /* PhoneNumberCleanUp.swift in Sources */,
 				CEAB3979289A7F2000BCBD5B /* WelcomeView.swift in Sources */,
