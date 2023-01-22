@@ -48,6 +48,8 @@
 		CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */; };
 		CEB3C1AA2938FFDE00904E69 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C1A92938FFDE00904E69 /* ChatViewModel.swift */; };
 		CEBD7A25297D949D008B6456 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD7A24297D949D008B6456 /* CacheService.swift */; };
+		CEBD7A27297DBDDA008B6456 /* ConversationTextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD7A26297DBDDA008B6456 /* ConversationTextMessage.swift */; };
+		CEBD7A29297DBDE9008B6456 /* ConversationPhotoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD7A28297DBDE8008B6456 /* ConversationPhotoMessage.swift */; };
 		CEC1CC4628BE03B000409C50 /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4528BE03B000409C50 /* ContactRow.swift */; };
 		CEC1CC4828BE2E1700409C50 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4728BE2E1700409C50 /* ConversationView.swift */; };
 		CEC1CC4B28BE2E8400409C50 /* ProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC1CC4A28BE2E8400409C50 /* ProfilePicView.swift */; };
@@ -111,6 +113,8 @@
 		CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
 		CEB3C1A92938FFDE00904E69 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		CEBD7A24297D949D008B6456 /* CacheService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
+		CEBD7A26297DBDDA008B6456 /* ConversationTextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTextMessage.swift; sourceTree = "<group>"; };
+		CEBD7A28297DBDE8008B6456 /* ConversationPhotoMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationPhotoMessage.swift; sourceTree = "<group>"; };
 		CEC1CC4528BE03B000409C50 /* ContactRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
 		CEC1CC4728BE2E1700409C50 /* ConversationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		CEC1CC4A28BE2E8400409C50 /* ProfilePicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePicView.swift; sourceTree = "<group>"; };
@@ -288,6 +292,8 @@
 			children = (
 				CEC562F828B3BFB800A08C38 /* ChatsListView.swift */,
 				CEC1CC4728BE2E1700409C50 /* ConversationView.swift */,
+				CEBD7A26297DBDDA008B6456 /* ConversationTextMessage.swift */,
+				CEBD7A28297DBDE8008B6456 /* ConversationPhotoMessage.swift */,
 				CED0971F29741B310089E25C /* ChatsListRow.swift */,
 			);
 			path = "Chats View";
@@ -474,6 +480,7 @@
 				CEAA2ABF288A80CB00A25647 /* HCard.swift in Sources */,
 				CE1A5559289FF8D300673015 /* User.swift in Sources */,
 				CEAA2AB428859F0700A25647 /* Course.swift in Sources */,
+				CEBD7A29297DBDE9008B6456 /* ConversationPhotoMessage.swift in Sources */,
 				CE942F1228982F7F0051B317 /* AppDelegate.swift in Sources */,
 				CEAA2AC1288AA79100A25647 /* HomeView.swift in Sources */,
 				CEAA2AC3288D306200A25647 /* SideMenu.swift in Sources */,
@@ -508,6 +515,7 @@
 				CEC562FB28B3BFC700A08C38 /* ContactsListView.swift in Sources */,
 				CEAA2AAF288584E200A25647 /* TabBar.swift in Sources */,
 				CEAB397B289A7F3500BCBD5B /* PhoneNumberView.swift in Sources */,
+				CEBD7A27297DBDDA008B6456 /* ConversationTextMessage.swift in Sources */,
 				CE3DFA612896AC0400E5A960 /* RootModel.swift in Sources */,
 				CEAA2AC5288D635C00A25647 /* MenuRow.swift in Sources */,
 			);

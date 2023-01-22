@@ -81,42 +81,12 @@ struct ConversationView: View {
                   }
                   
                   if msg.imageurl != "" {
-                    let photoUrl = URL(string: msg.imageurl!)
-                      AsyncImage(url: photoUrl) { phase in
-                          
-                          switch phase {
-                              
-                          case .empty:
-                              ProgressView()
-                              
-                          case .success(let image):
-                            image
-                              .resizable()
-                              .scaledToFill()
-                              .padding(.vertical, 16)
-                              .padding(.horizontal, 24)
-                              .background(isFromUser ? Color("bubble-primary") : Color("bubble-secondary"))
-                              .cornerRadius(30, corners: isFromUser ? [.topLeft, .topRight, .bottomLeft] : [.topLeft, .topRight, .bottomRight])
-                          case .failure:
-                            Text("Couldn't load image")
-                              .customFont(.subheadline)
-                              .foregroundColor(isFromUser ? Color("text-button") : Color("text-primary"))
-                              .padding(.vertical, 16)
-                              .padding(.horizontal, 24)
-                              .background(isFromUser ? Color("bubble-primary") : Color("bubble-secondary"))
-                              .cornerRadius(30, corners: isFromUser ? [.topLeft, .topRight, .bottomLeft] : [.topLeft, .topRight, .bottomRight])
-                          }
-                          
-                      }
+                    ConversationPhotoMessage(imageUrl: msg.imageurl!,
+                                             isFromUser: isFromUser)
                   }
                   else {
-                    Text(msg.msg)
-                      .customFont(.subheadline)
-                      .foregroundColor(isFromUser ? Color("text-button") : Color("text-primary"))
-                      .padding(.vertical, 16)
-                      .padding(.horizontal, 24)
-                      .background(isFromUser ? Color("bubble-primary") : Color("bubble-secondary"))
-                      .cornerRadius(30, corners: isFromUser ? [.topLeft, .topRight, .bottomLeft] : [.topLeft, .topRight, .bottomRight])
+                    ConversationTextMessage(msg: msg.msg,
+                                            isFromUser: isFromUser)
                   }
                   
                   if !isFromUser {
