@@ -55,7 +55,7 @@ struct ContactsListView: View {
                 List(contactsViewModel.filteredUsers) { user in
                   
                   Button {
-                    chatViewModel.getChatFor(contact: user)
+                    chatViewModel.getChatFor(contacts: [user])
                     isChatShowing = true
                   } label: {
                     ContactRow(user: user)

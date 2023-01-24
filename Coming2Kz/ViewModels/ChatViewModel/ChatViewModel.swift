@@ -30,15 +30,18 @@ class ChatViewModel: ObservableObject {
     }
   }
   
-  func getChatFor(contact: User) {
-
+  func getChatFor(contacts: [User]) {
+    
+    for contact in contacts {
       guard contact.id != nil else {
-          return
+        return
       }
-      
+    }
+    let setOfContactIds = Set(arrayLiteral: contacts.map { u in u.id! })
       let foundChat = chats.filter { chat in
-          
-          return chat.numparticipants == 2 && chat.participantids.contains(contact.id!)
+    
+          let setOfParticipants = Set(arrayLiteral: chat.participantids)
+        return chat.numparticipants == contacts.count + 1 && setOfContactIds.isSubset(of: setOfParticipants)
       }
 
       if !foundChat.isEmpty {
@@ -48,10 +51,12 @@ class ChatViewModel: ObservableObject {
           getMessages()
       }
       else {
+        var allparticipantIds = contacts.map { u in u.id! }
+        allparticipantIds.append(AuthViewModel.getLoggedInUserId())
   
-          var newChat = Chat(id: nil,
-                             numparticipants: 2,
-                             participantids: [AuthViewModel.getLoggedInUserId(), contact.id!],
+          let newChat = Chat(id: nil,
+                             numparticipants: allparticipantIds.count,
+                             participantids: allparticipantIds,
                              lastmsg: nil, updated: nil, msgs: nil)
  
           self.selectedChat = newChat
@@ -59,8 +64,8 @@ class ChatViewModel: ObservableObject {
           databaseService.createChat(chat: newChat) { docId in
          
               self.selectedChat = Chat(id: docId,
-                                       numparticipants: 2,
-                                       participantids: [AuthViewModel.getLoggedInUserId(), contact.id!],
+                                       numparticipants: allparticipantIds.count,
+                                       participantids: allparticipantIds,
                                        lastmsg: nil, updated: nil, msgs: nil)
  
               self.chats.append(self.selectedChat!)

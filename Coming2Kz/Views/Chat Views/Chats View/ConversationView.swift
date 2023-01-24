@@ -55,9 +55,35 @@ struct ConversationView: View {
               // Name
               if participants.count > 0 {
                 let participant = participants.first
-                Text("\(participant?.firstname ?? "") \(participant?.lastname ?? "")")
-                  .customFont(.headline)
-                  .foregroundColor(Color("text-header"))
+             //   Group {
+                  
+                  if participants.count == 1 {
+                    Text("\(participant?.firstname ?? "") \(participant?.lastname ?? "")")
+                      .customFont(.headline)
+                      .foregroundColor(Color("text-header"))
+                  }
+                  else if participants.count == 2 {
+                    
+                    let participant2 = participants[1]
+                    
+                    Text("\(participant?.firstname ?? ""),  \(participant2.firstname ?? "")")
+                      .customFont(.headline)
+                      .foregroundColor(Color("text-header"))
+                  }
+                  
+                  else if participants.count > 2 {
+                    
+                    let participant2 = participants[1]
+                    
+                    Text("\(participant?.firstname ?? ""),  \(participant2.firstname ?? "") + \(participants.count - 2) others")
+                      .customFont(.headline)
+                      .foregroundColor(Color("text-header"))
+                  }
+             //   }
+               
+                
+                
+                
               }
               else {
                 Text("Recipients")
@@ -70,9 +96,12 @@ struct ConversationView: View {
             Spacer()
             
             // Profile image
-            if participants.count > 0 {
+            if participants.count == 1 {
               let participant = participants.first
               ProfilePicView(user: participant!)
+            }
+            else if participants.count > 1 {
+              GroupProfilePicView(users: participants)
             }
             else {
               Button {
@@ -265,13 +294,13 @@ struct ConversationView: View {
       ImagePicker(selectedImage: $selectedImage, isPickerShowing: $isPickerShowing, source: self.source)
     }
     .sheet(isPresented: $isSContactsPickerShowing) {
-      if let participants = participants.first {
-        chatViewModel.getChatFor(contact: participants)
-      }
+      
+      chatViewModel.getChatFor(contacts: participants)
+      
     } content: {
       ContactsPicker(isContactsPickerShowing: $isSContactsPickerShowing, selectedContacts: self.$participants)
     }
-
+    
   }
 }
 

@@ -48,6 +48,7 @@
 		CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */; };
 		CEAB3983289A8D8200BCBD5B /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */; };
 		CEB3C1AA2938FFDE00904E69 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C1A92938FFDE00904E69 /* ChatViewModel.swift */; };
+		CEB444722980492E00D44DBE /* GroupProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB444712980492E00D44DBE /* GroupProfilePicView.swift */; };
 		CEBD7A25297D949D008B6456 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD7A24297D949D008B6456 /* CacheService.swift */; };
 		CEBD7A27297DBDDA008B6456 /* ConversationTextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD7A26297DBDDA008B6456 /* ConversationTextMessage.swift */; };
 		CEBD7A29297DBDE9008B6456 /* ConversationPhotoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD7A28297DBDE8008B6456 /* ConversationPhotoMessage.swift */; };
@@ -114,6 +115,7 @@
 		CEAB3980289A7F8800BCBD5B /* SyncContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncContactsView.swift; sourceTree = "<group>"; };
 		CEAB3982289A8D8200BCBD5B /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
 		CEB3C1A92938FFDE00904E69 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		CEB444712980492E00D44DBE /* GroupProfilePicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupProfilePicView.swift; sourceTree = "<group>"; };
 		CEBD7A24297D949D008B6456 /* CacheService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
 		CEBD7A26297DBDDA008B6456 /* ConversationTextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTextMessage.swift; sourceTree = "<group>"; };
 		CEBD7A28297DBDE8008B6456 /* ConversationPhotoMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationPhotoMessage.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC1CC4A28BE2E8400409C50 /* ProfilePicView.swift */,
+				CEB444712980492E00D44DBE /* GroupProfilePicView.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 			files = (
 				CED0972029741B310089E25C /* ChatsListRow.swift in Sources */,
 				CEAB3981289A7F8800BCBD5B /* SyncContactsView.swift in Sources */,
+				CEB444722980492E00D44DBE /* GroupProfilePicView.swift in Sources */,
 				CE1A5556289FF08300673015 /* ContactsViewModel.swift in Sources */,
 				CEC562F928B3BFB800A08C38 /* ChatsListView.swift in Sources */,
 				CE1236BF289864E200B86F03 /* AuthViewModel.swift in Sources */,

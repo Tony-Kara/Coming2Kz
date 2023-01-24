@@ -11,35 +11,61 @@ struct ChatsListRow: View {
   var chat: Chat
   var otherParticipants: [User]?
   
-    var body: some View {
+  var body: some View {
+    
+    HStack (spacing: 24) {
+      let participant = otherParticipants?.first
       
-      HStack (spacing: 24) {
-        let participant = otherParticipants?.first
-        
+      if participant != nil && otherParticipants!.count == 1 {
         if participant != nil {
           ProfilePicView(user: participant!)
         }
+      }
+      else if otherParticipants != nil && otherParticipants!.count > 1 {
+        GroupProfilePicView(users: otherParticipants!)
+      }
+      
+      
+      
+      VStack (alignment: .leading, spacing: 4) {
         
-        VStack (alignment: .leading, spacing: 4) {
-          Text(participant == nil ? "Unknown" :
-                "\(participant!.firstname ?? "") \(participant!.lastname ?? "")")
+        if let otherParticipants = otherParticipants {
+          
+          Group {
+            
+            if otherParticipants.count == 1 {
+              Text("\(participant!.firstname ?? "") \(participant!.lastname ?? "")")
+            }
+            
+            else if otherParticipants.count == 2 {
+              let participant2 = otherParticipants[1]
+              Text("\(participant!.firstname ?? ""), \(participant2.firstname ?? "")")
+            }
+            
+            else if otherParticipants.count > 2 {
+              let participant2 = otherParticipants[1]
+              Text("\(participant!.firstname ?? "") , \(participant2.firstname ?? "") + \(otherParticipants.count - 2)")
+              
+            }
+          }
           .customFont(.subheadline2)
           .foregroundColor(Color("text-primary"))
-          
-          Text(chat.lastmsg ?? "")
-            .customFont(.subheadline)
-            .foregroundColor(Color("text-input"))
         }
         
-        Spacer()
-        
-        Text(chat.updated == nil ? "" :
-              DateHelper.chatTimestampFrom(date: chat.updated!))
-        .customFont(.subheadline)
-        .foregroundColor(Color("text-input"))
+        Text(chat.lastmsg ?? "")
+          .customFont(.subheadline)
+          .foregroundColor(Color("text-input"))
       }
-  }
+      
+      Spacer()
+      
+      Text(chat.updated == nil ? "" :
+            DateHelper.chatTimestampFrom(date: chat.updated!))
+      .customFont(.subheadline)
+      .foregroundColor(Color("text-input"))
     }
+  }
+}
 
 
 
