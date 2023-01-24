@@ -43,7 +43,6 @@ struct ConversationPhotoMessage: View {
                         .cornerRadius(30, corners: isFromUser ? [.topLeft, .topRight, .bottomLeft] : [.topLeft, .topRight, .bottomRight])
                         .onAppear {
                             
-                            // Save this image to cache
                             CacheService.setImage(image: image, forKey: imageUrl)
                         }
                     

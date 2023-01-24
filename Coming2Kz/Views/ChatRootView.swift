@@ -46,7 +46,7 @@ struct ChatRootView: View {
         
         
         Spacer()
-        ChatTabBar()
+        ChatTabBar(isChatShowing: $isChatShowing)
         //  .offset(y: -24)
           .frame(width: 24, height: 24, alignment: .bottom)
           .padding(.bottom,5)

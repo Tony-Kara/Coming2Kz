@@ -32,6 +32,7 @@ var chatTabItems = [
 struct ChatTabBar: View {
  // @Binding var selectedTab: Tabs
   @AppStorage("selectedChatTab") var selectedTab: Tabs = .home
+  @Binding var isChatShowing: Bool
   @EnvironmentObject var rootModel: RootModel
   var body: some View {
     
@@ -42,8 +43,10 @@ struct ChatTabBar: View {
           ForEach(chatTabItems) { item in
             Button {
               selectedTab = item.tab
-              if selectedTab == .home {
+              
+              if selectedTab == .newChats {
               //  AuthViewModel.logout()
+                isChatShowing = true
               }
             } label: {
               
@@ -72,7 +75,7 @@ struct ChatTabBar: View {
 
 struct ChatTabBar_Previews: PreviewProvider {
   static var previews: some View {
-    ChatTabBar()
+    ChatTabBar(isChatShowing: .constant(false))
       .environmentObject(RootModel())
   }
 }
