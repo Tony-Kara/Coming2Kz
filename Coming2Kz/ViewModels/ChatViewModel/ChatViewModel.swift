@@ -19,6 +19,11 @@ class ChatViewModel: ObservableObject {
   
   var databaseService = DatabaseService()
   
+  func clearSelectedChat() {
+      self.selectedChat = nil
+      self.messages.removeAll()
+  }
+  
   func getChats() {
     databaseService.getAllChats { chats in
       self.chats = chats

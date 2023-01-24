@@ -25,8 +25,7 @@ struct ChatRootView: View {
           case .home:
             HomeView()
           case .chats:
-            SignInView()
-              .background(.white)
+            HomeView()
           case .contacts:
             ContactsListView(isChatShowing: $isChatShowing)
           case .newChats:

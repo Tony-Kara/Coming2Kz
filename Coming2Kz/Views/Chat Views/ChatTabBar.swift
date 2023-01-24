@@ -34,6 +34,7 @@ struct ChatTabBar: View {
   @AppStorage("selectedChatTab") var selectedTab: Tabs = .home
   @Binding var isChatShowing: Bool
   @EnvironmentObject var rootModel: RootModel
+  @EnvironmentObject var chatViewModel: ChatViewModel
   var body: some View {
     
    
@@ -46,6 +47,7 @@ struct ChatTabBar: View {
               
               if selectedTab == .newChats {
               //  AuthViewModel.logout()
+                chatViewModel.clearSelectedChat()
                 isChatShowing = true
               }
             } label: {
