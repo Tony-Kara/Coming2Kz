@@ -115,7 +115,6 @@ struct ConversationView: View {
               }
               
             }
-            
           }
           .padding(.horizontal)
           
@@ -164,9 +163,6 @@ struct ConversationView: View {
                 }
                 .id(index)
               }
-              
-              
-              
             }
             .padding(.horizontal)
             .padding(.top, 24)
@@ -178,7 +174,6 @@ struct ConversationView: View {
             }
             
           }
-          
         }
         // Chat message bar
         
@@ -232,8 +227,6 @@ struct ConversationView: View {
             }
           }
           .frame(height: 44)
-          
-          
           // Send button
           Button {
             
