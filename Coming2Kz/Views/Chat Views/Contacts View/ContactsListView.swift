@@ -8,6 +8,7 @@ struct ContactsListView: View {
     @EnvironmentObject var chatViewModel: ChatViewModel
   
     @Binding var isChatShowing: Bool
+    @Binding var isSettingsShowing: Bool
     
     @State var filterText = ""
     
@@ -21,7 +22,7 @@ struct ContactsListView: View {
                 Spacer()
                 
                 Button {
-                    // TODO: Settings
+                   isSettingsShowing = true
                 } label: {
                     Image(systemName: "gearshape.fill")
                         .resizable()
@@ -96,6 +97,6 @@ struct ContactsListView: View {
 
 struct ContactsListView_Previews: PreviewProvider {
     static var previews: some View {
-      ContactsListView(isChatShowing: .constant(true))
+        ContactsListView(isChatShowing: .constant(true), isSettingsShowing: .constant(true))
     }
 }

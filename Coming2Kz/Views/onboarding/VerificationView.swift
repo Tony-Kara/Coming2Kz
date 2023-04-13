@@ -9,6 +9,9 @@ import SwiftUI
 import Combine
 
 struct VerificationView: View {
+    
+  @EnvironmentObject var contactsViewModel: ContactsViewModel
+  @EnvironmentObject var chatViewModel: ChatViewModel
   @State var verificationCode = ""
   @Binding var currentStep: OnboardingStep
   @Binding var isOnboarding: Bool
@@ -67,6 +70,8 @@ struct VerificationView: View {
             DatabaseService().checkUserProfile { exists in
               if exists {
                 isOnboarding = false
+                contactsViewModel.getLocalContact()
+                  chatViewModel.getChats()
               }
               else {
                 currentStep = .profile

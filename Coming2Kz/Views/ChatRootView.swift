@@ -15,6 +15,7 @@ struct ChatRootView: View {
   // @State var selectedTab: Tabs = .contacts
   @State var isOnboarding = !AuthViewModel.isUserLoggedIn()
   @State var isChatShowing = false
+  @State var isSettingsShowing = false
   var body: some View {
     ZStack {
       Color("backgroundc").ignoresSafeArea()
@@ -27,9 +28,9 @@ struct ChatRootView: View {
           case .chats:
             HomeView()
           case .contacts:
-            ContactsListView(isChatShowing: $isChatShowing)
+              ContactsListView(isChatShowing: $isChatShowing, isSettingsShowing: $isSettingsShowing)
           case .newChats:
-            ChatsListView(isChatShowing: $isChatShowing)
+              ChatsListView(isChatShowing: $isChatShowing, isSettingsShowing: $isSettingsShowing)
           }
         }
         //          .safeAreaInset(edge: .bottom) {
@@ -54,7 +55,13 @@ struct ChatRootView: View {
         
         
       }
-      .fullScreenCover(isPresented: $isOnboarding) {
+    }
+    .onAppear {
+      if !isOnboarding {
+        contactsViewModel.getLocalContact()
+      }
+    }
+    .fullScreenCover(isPresented: $isOnboarding) {
       }
     content: {
       // The onboarding flow
@@ -63,6 +70,9 @@ struct ChatRootView: View {
     .fullScreenCover(isPresented: $isChatShowing, onDismiss: nil) {
       ConversationView(isChatShowing: $isChatShowing)
     }
+    .fullScreenCover(isPresented: $isSettingsShowing, content: {
+        SettingsView(isSettingsShowing: $isSettingsShowing, isOnboarding: $isOnboarding)
+    })
     .onChange(of: scenePhase) { newPhase in
       if newPhase == .active {
         print("Active")
@@ -73,12 +83,6 @@ struct ChatRootView: View {
       else if newPhase == .background {
         print("Background")
         chatViewModel.chatListViewCleanup()
-      }
-    }
-    }
-    .onAppear {
-      if !isOnboarding {
-        contactsViewModel.getLocalContact()
       }
     }
   }
