@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @EnvironmentObject var settingsViewModel: SettingsViewModel
+    
     @Binding var isSettingsShowing: Bool
     @Binding var isOnboarding: Bool
     
@@ -63,9 +65,12 @@ struct SettingsView: View {
                     } label: {
                         Text("Log Out")
                     }
-
+                        
                     Button {
-                        // TODO: Delete Account
+                        settingsViewModel.deactivateAccount {
+                            AuthViewModel.logout()
+                            isOnboarding = true
+                        }
                     } label: {
                         Text("Delete Account")
                     }
