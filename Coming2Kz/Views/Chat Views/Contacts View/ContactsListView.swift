@@ -54,17 +54,17 @@ struct ContactsListView: View {
             
                 // List
                 List(contactsViewModel.filteredUsers) { user in
-                  
-                  Button {
-                    chatViewModel.getChatFor(contacts: [user])
-                    isChatShowing = true
-                  } label: {
-                    ContactRow(user: user)
-                  }
-                  .buttonStyle(.plain)
-                  .listRowBackground(Color.clear)
-                  .listRowSeparator(.hidden)
-
+                    if user.isActive {
+                        Button {
+                            chatViewModel.getChatFor(contacts: [user])
+                            isChatShowing = true
+                        } label: {
+                            ContactRow(user: user)
+                        }
+                        .buttonStyle(.plain)
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(.hidden)
+                    }
                 }
                 .listStyle(.plain)
                 .padding(.top, 12)

@@ -16,7 +16,7 @@ struct ChatsListRow: View {
     HStack (spacing: 24) {
       let participant = otherParticipants?.first
       
-      if participant != nil && otherParticipants!.count == 1 {
+      if otherParticipants != nil && otherParticipants!.count == 1 {
         if participant != nil {
           ProfilePicView(user: participant!)
         }
@@ -44,7 +44,7 @@ struct ChatsListRow: View {
             
             else if otherParticipants.count > 2 {
               let participant2 = otherParticipants[1]
-              Text("\(participant!.firstname ?? "") , \(participant2.firstname ?? "") + \(otherParticipants.count - 2)")
+              Text("\(participant!.firstname ?? "") , \(participant2.firstname ?? "") + \(otherParticipants.count - 2) others")
               
             }
           }

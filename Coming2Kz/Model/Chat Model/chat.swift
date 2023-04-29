@@ -36,4 +36,3 @@ struct ChatMessage: Codable, Identifiable, Hashable {
     
     var senderid: String
 }
-
