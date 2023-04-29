@@ -141,14 +141,34 @@ struct ConversationView: View {
                     
                     Spacer()
                   }
+                    
+                    else if participants.count > 1 {
+                        let userOfMsg = participants.filter { p in
+                            p.id == msg.senderid
+                        }.first
+                        if let userOfMsg = userOfMsg {
+                            ProfilePicView(user: userOfMsg)
+                                .padding(.trailing, 16)
+                        }
+                    }
                   
                   if msg.imageurl != "" {
                     ConversationPhotoMessage(imageUrl: msg.imageurl!,
                                              isFromUser: isFromUser)
                   }
                   else {
-                    ConversationTextMessage(msg: msg.msg,
-                                            isFromUser: isFromUser)
+                      
+                      if participants.count > 1 && !isFromUser {
+                          let userOfMsg = participants.filter { p in
+                              p.id == msg.senderid
+                          }.first
+                          ConversationTextMessage(msg: msg.msg, isFromUser: isFromUser, name: "\(userOfMsg?.firstname ?? "") \(userOfMsg?.lastname ?? "")")
+                      }
+                      else {
+                          ConversationTextMessage(msg: msg.msg,
+                                                  isFromUser: isFromUser)
+                      }
+                    
                   }
                   
                   if !isFromUser {
