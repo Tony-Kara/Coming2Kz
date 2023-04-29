@@ -39,14 +39,19 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct Coming2KzApp: App {
   // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    @StateObject var rootModel = RootModel()
+    @StateObject var settingsViewModel = SettingsViewModel()
+    @StateObject var contactsViewModel = ContactsViewModel()
+    @StateObject var chatViewModel = ChatViewModel()
 
     var body: some Scene {
         WindowGroup {
            RootView()
-            .environmentObject(RootModel())
-            .environmentObject(ContactsViewModel())
-            .environmentObject(ChatViewModel())
-            .environmentObject(SettingsViewModel())
+            .environmentObject(rootModel)
+            .environmentObject(contactsViewModel)
+            .environmentObject(chatViewModel)
+            .environmentObject(settingsViewModel)
         }
     }
 }
