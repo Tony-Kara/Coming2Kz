@@ -11,10 +11,15 @@ struct ConversationPhotoMessage: View {
     
     var imageUrl: String
     var isFromUser: Bool
+    var isActive = true
     
     var body: some View {
         
-        if let cachedImage = CacheService.getImage(forKey: imageUrl) {
+        if !isActive {
+            ConversationTextMessage(msg: "Photo deleted", isFromUser: isFromUser, name: nil, isActive: isActive)
+        }
+        
+       else if let cachedImage = CacheService.getImage(forKey: imageUrl) {
             cachedImage
                 .resizable()
                 .scaledToFill()

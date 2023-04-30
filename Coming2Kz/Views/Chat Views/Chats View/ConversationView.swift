@@ -151,18 +151,19 @@ struct ConversationView: View {
                                 .padding(.trailing, 16)
                         }
                     }
-                  
+                    let userOfMsg = participants.filter { p in
+                        p.id == msg.senderid
+                    }.first
+                    
                   if msg.imageurl != "" {
                     ConversationPhotoMessage(imageUrl: msg.imageurl!,
-                                             isFromUser: isFromUser)
+                                             isFromUser: isFromUser, isActive: userOfMsg?.isActive ?? true)
                   }
                   else {
                       
                       if participants.count > 1 && !isFromUser {
-                          let userOfMsg = participants.filter { p in
-                              p.id == msg.senderid
-                          }.first
-                          ConversationTextMessage(msg: msg.msg, isFromUser: isFromUser, name: "\(userOfMsg?.firstname ?? "") \(userOfMsg?.lastname ?? "")")
+                         
+                          ConversationTextMessage(msg: msg.msg, isFromUser: isFromUser, name: "\(userOfMsg?.firstname ?? "") \(userOfMsg?.lastname ?? "")", isActive: userOfMsg?.isActive ?? true)
                       }
                       else {
                           ConversationTextMessage(msg: msg.msg,
