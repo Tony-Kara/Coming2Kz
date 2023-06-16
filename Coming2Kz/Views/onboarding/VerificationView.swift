@@ -14,6 +14,7 @@ struct VerificationView: View {
   @EnvironmentObject var chatViewModel: ChatViewModel
   @State var isButtonDisabled = false
   @State var verificationCode = ""
+  @State var isErrorLabelVisible = false
   @Binding var currentStep: OnboardingStep
   @Binding var isOnboarding: Bool
   var body: some View {
@@ -41,7 +42,7 @@ struct VerificationView: View {
             .onReceive(Just(verificationCode)) { _ in
               PhoneNumberCleanUp.limitText(&verificationCode, 6)
             }
-          
+            
           Spacer()
           
           Button {
@@ -61,11 +62,19 @@ struct VerificationView: View {
       }
       .padding(.top, 34)
       
+        
+        Text("Invalid verification code.")
+        .foregroundColor(.red)
+        .font(Font.caption2)
+        .padding(.top, 20)
+        .opacity(isErrorLabelVisible ? 1 : 0)
+        
       Spacer()
       
       Button {
           
         isButtonDisabled = true
+        isErrorLabelVisible = false
         AuthViewModel.verifyCode(code: verificationCode) { error in
           
           if error == nil {
@@ -78,13 +87,14 @@ struct VerificationView: View {
               else {
                 currentStep = .profile
               }
-                isButtonDisabled = false
+                
             }
             
           }
           else {
-            
+              isErrorLabelVisible = true
           }
+            isButtonDisabled = false
         }
         
         

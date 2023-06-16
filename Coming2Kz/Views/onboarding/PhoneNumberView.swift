@@ -11,6 +11,7 @@ import Combine
 struct PhoneNumberView: View {
   @State var phoneNumber = ""
   @State var isButtonDisabled = false
+  @State var isErrorLabelVisible = false
   @Binding var currentStep: OnboardingStep
     var body: some View {
       
@@ -34,8 +35,15 @@ struct PhoneNumberView: View {
                       }
                   }
                   
+                Text("Please enter a valid phone number.")
+                .foregroundColor(.red)
+                .font(Font.caption2)
+                .padding(.top, 20)
+                .opacity(isErrorLabelVisible ? 1 : 0)
+            
                   Button {
                   //  currentStep = .verification
+                      isErrorLabelVisible = false
                     isButtonDisabled = true
                     AuthViewModel.sendPhoneNumber(phone: phoneNumber) { error in
 
@@ -44,7 +52,7 @@ struct PhoneNumberView: View {
                         currentStep = .verification
                       }
                       else {
-
+                            isErrorLabelVisible = true
                       }
                         isButtonDisabled = false
                     }
