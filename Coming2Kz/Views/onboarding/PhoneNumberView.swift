@@ -10,6 +10,7 @@ import Combine
 
 struct PhoneNumberView: View {
   @State var phoneNumber = ""
+  @State var isButtonDisabled = false
   @Binding var currentStep: OnboardingStep
     var body: some View {
       
@@ -35,6 +36,7 @@ struct PhoneNumberView: View {
                   
                   Button {
                   //  currentStep = .verification
+                    isButtonDisabled = true
                     AuthViewModel.sendPhoneNumber(phone: phoneNumber) { error in
 
                       if error == nil {
@@ -44,6 +46,7 @@ struct PhoneNumberView: View {
                       else {
 
                       }
+                        isButtonDisabled = false
                     }
                     
                   } label: {
@@ -54,10 +57,17 @@ struct PhoneNumberView: View {
                               .cornerRadius(25)
                               .shadow(radius: 5)
                           
-                          Text("Next")
-                              .foregroundColor(.black)
+                          HStack {
+                              Text("Next")
+                                  .foregroundColor(.black)
+                              if isButtonDisabled {
+                                  ProgressView()
+                                      .padding(.leading, 2)
+                              }
+                          }
                       }
                   }
+                  .disabled(isButtonDisabled)
                   
               }
               .padding(30)

@@ -26,48 +26,54 @@ struct ContactsPicker: View {
               ScrollView {
                   
                   ForEach(contactsViewModel.filteredUsers) { user in
-                      let isSelectedContact = selectedContacts.contains { u in
-                          u.id == user.id
+                      
+                      if user.isActive {
+                          let isSelectedContact = selectedContacts.contains { u in
+                              u.id == user.id
+                          }
+                          ZStack {
+                              ContactRow(user: user)
+                                  
+                              
+                              HStack {
+                                  Spacer()
+                                  
+                                  Button {
+                                      
+                                      if isSelectedContact {
+                                        let index = selectedContacts.firstIndex(of: user)
+                                        if let index = index {
+                                          selectedContacts.remove(at: index)
+                                        }
+                                          
+                                      }
+                                      else {
+                                        if selectedContacts.count < 3 {
+                                          selectedContacts.append(user)
+                                        }
+                                        else {
+                                          // TODO: show message limit
+                                        }
+                                      }
+                                      
+                                  } label: {
+                                      
+                                      Image(systemName: isSelectedContact ? "checkmark.circle.fill" :
+                                              "checkmark.circle")
+                                          .resizable()
+                                          .foregroundColor(Color("button-primary"))
+                                          .frame(width: 25, height: 25)
+                                  }
+
+                              }
+                          }
+                          .padding(.top, 18)
+                          .padding(.horizontal)
                       }
                       
-                      ZStack {
-                          ContactRow(user: user)
-                              
-                          
-                          HStack {
-                              Spacer()
-                              
-                              Button {
-                                  
-                                  if isSelectedContact {
-                                    let index = selectedContacts.firstIndex(of: user)
-                                    if let index = index {
-                                      selectedContacts.remove(at: index)
-                                    }
-                                      
-                                  }
-                                  else {
-                                    if selectedContacts.count < 3 {
-                                      selectedContacts.append(user)
-                                    }
-                                    else {
-                                      // TODO: show message limit
-                                    }
-                                  }
-                                  
-                              } label: {
-                                  
-                                  Image(systemName: isSelectedContact ? "checkmark.circle.fill" :
-                                          "checkmark.circle")
-                                      .resizable()
-                                      .foregroundColor(Color("button-primary"))
-                                      .frame(width: 25, height: 25)
-                              }
-
-                          }
-                      }
-                      .padding(.top, 18)
-                      .padding(.horizontal)
+                     
+                      
+                      
                   }
               }
               

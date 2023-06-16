@@ -309,7 +309,11 @@ struct ConversationView: View {
     }
     .sheet(isPresented: $isSContactsPickerShowing) {
       
-      chatViewModel.getChatFor(contacts: participants)
+        if participants.count > 0 {
+            chatViewModel.getChatFor(contacts: participants)
+        }
+        
+      
       
     } content: {
       ContactsPicker(isContactsPickerShowing: $isSContactsPickerShowing, selectedContacts: self.$participants)

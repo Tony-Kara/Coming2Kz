@@ -12,6 +12,7 @@ struct VerificationView: View {
     
   @EnvironmentObject var contactsViewModel: ContactsViewModel
   @EnvironmentObject var chatViewModel: ChatViewModel
+  @State var isButtonDisabled = false
   @State var verificationCode = ""
   @Binding var currentStep: OnboardingStep
   @Binding var isOnboarding: Bool
@@ -63,7 +64,8 @@ struct VerificationView: View {
       Spacer()
       
       Button {
-        
+          
+        isButtonDisabled = true
         AuthViewModel.verifyCode(code: verificationCode) { error in
           
           if error == nil {
@@ -76,6 +78,7 @@ struct VerificationView: View {
               else {
                 currentStep = .profile
               }
+                isButtonDisabled = false
             }
             
           }
@@ -88,10 +91,26 @@ struct VerificationView: View {
         
         
       } label: {
-        Text("Next")
+          ZStack{
+              Rectangle()
+                  .frame(width: 236, height: 64)
+                  .foregroundColor(.white)
+                  .cornerRadius(25)
+                  .shadow(radius: 5)
+              
+              HStack {
+                  Text("Next")
+                      .foregroundColor(.black)
+                  if isButtonDisabled {
+                      ProgressView()
+                          .padding(.leading, 2)
+                  }
+              }
+          }
       }
-      .buttonStyle(OnboardingButtonStyle())
+     // .buttonStyle(OnboardingButtonStyle())
       .padding(.bottom, 87)
+      .disabled(isButtonDisabled)
       
       
     }
