@@ -63,6 +63,7 @@ class DatabaseService {
     let doc = db.collection("users").document(AuthViewModel.getLoggedInUserId())
     doc.setData(["firstname" : firstName,
                  "lastname" : lastName,
+                 "isActive" : true,
                  "phone" : userPhone
                  
                 ])

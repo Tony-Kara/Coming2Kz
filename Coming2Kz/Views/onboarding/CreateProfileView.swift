@@ -16,6 +16,9 @@ struct CreateProfileView: View {
   @State var source: UIImagePickerController.SourceType = .photoLibrary
   @State var isSaveButtonDisabled = false
   @Binding var currentStep: OnboardingStep
+  @State var errorMessage = ""
+  @State var isErrorLabelVisible = false
+    
     var body: some View {
       VStack {
           
@@ -70,16 +73,33 @@ struct CreateProfileView: View {
           TextField("Last Name", text: $lastName)
               .textFieldStyle(CreateProfileTextfieldStyle())
           
+          Text(errorMessage)
+          .foregroundColor(.red)
+          .font(Font.caption2)
+          .padding(.top, 20)
+          .opacity(isErrorLabelVisible ? 1 : 0)
+          
           Spacer()
           
           Button {
-            isSaveButtonDisabled = true
             
+            isErrorLabelVisible = false
+              
+              guard !firstName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty &&
+                    !lastName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+              else {
+                  errorMessage = "Please enter a valid firstName and LastName"
+                  isErrorLabelVisible = true
+                  return
+              }
+              isSaveButtonDisabled = true
             DatabaseService().setUserProfile(firstName: firstName, lastName: lastName, image: selectedImage) { isSuccess in
               if isSuccess {
                 currentStep = .contact
               }
               else {
+                  errorMessage = "Error occurred. Please try again"
+                  isErrorLabelVisible = true
               }
               
               isSaveButtonDisabled = false
