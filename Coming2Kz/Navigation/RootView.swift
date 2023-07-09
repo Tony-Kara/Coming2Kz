@@ -29,17 +29,11 @@ struct RootView: View {
         
         Group {
           switch selectedTab {
+          case .home:
+              HomeView()
           case .chat:
-            HomeView()
-          case .search:
-            SignInView()
-          case .timer:
-            OnboardingView()
-              .background(.white)
-          case .bell:
-            Text("Hello, world!")
-          case .user:
-            Text("Hello, world!")
+              OnboardingView()
+                .background(.white)
           }
         }
         .safeAreaInset(edge: .bottom) {
