@@ -123,7 +123,7 @@ struct RootView: View {
                           .frame(width: 44, height: 44)
                           .mask(Circle())
                           .shadow(color: Color("Shadow").opacity(0.2), radius: 5, x: 0, y: 5)
-                          .padding()
+                          .padding(.leading, -5)
                           .onChange(of: isOpen) { newValue in
                             if newValue {
                               UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
