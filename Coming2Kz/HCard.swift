@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HCard: View {
-  var section: CourseSection
+  var section: ServicesSection
     var body: some View {
       HStack(spacing:20) {
         VStack(alignment: .leading, spacing: 8) {
@@ -33,6 +33,6 @@ struct HCard: View {
 
 struct HCard_Previews: PreviewProvider {
     static var previews: some View {
-      HCard(section: courseSections[2])
+      HCard(section: serviceSections[2])
     }
 }

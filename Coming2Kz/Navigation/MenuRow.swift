@@ -10,6 +10,7 @@ import SwiftUI
 struct MenuRow: View {
   let item: MenuItem
   @Binding var selectedMenu: SelectedMenu
+  @Binding var isOpen: Bool
   
     var body: some View {
       HStack(spacing:14) {
@@ -29,6 +30,9 @@ struct MenuRow: View {
       )
       .background(Color("Background 2"))
       .onTapGesture {
+          print("111-6", isOpen)
+        //  isOpen.toggle()
+         
         item.icon.setInput("active", value: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
           item.icon.setInput("active", value: false)
@@ -42,6 +46,6 @@ struct MenuRow: View {
 
 struct MenuRow_Previews: PreviewProvider {
     static var previews: some View {
-      MenuRow(item: menuItems[0], selectedMenu: .constant(.home))
+        MenuRow(item: menuItems[0], selectedMenu: .constant(.home), isOpen: .constant(false))
     }
 }

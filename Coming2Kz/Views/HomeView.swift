@@ -20,10 +20,23 @@ struct HomeView: View {
             
             ScrollView(.horizontal, showsIndicators: false){
               HStack{
-                ForEach(courses) { course in
-                  VCard(course: course)
-                  
+                ForEach(teachingServices) { service in
+                    NavigationLink(value: Route.servicesType(servics: service)) {
+                        VCard(services: service)
+                    }
                 }
+                  
+                  ForEach(chefservices) { service in
+                      NavigationLink(value: Route.servicesType(servics: service)) {
+                          VCard(services: service)
+                      }
+                  }
+                  
+                  ForEach(womenServices) { service in
+                      NavigationLink(value: Route.servicesType(servics: service)) {
+                          VCard(services: service)
+                      }
+                  }
               }
               .padding(20)
               .padding(.bottom,10)
@@ -34,7 +47,7 @@ struct HomeView: View {
               .padding(.horizontal,20)
             
             VStack(spacing:20){
-              ForEach(courseSections) { section in
+              ForEach(serviceSections) { section in
                 HCard(section: section)
               }
             }

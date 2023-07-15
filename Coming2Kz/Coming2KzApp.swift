@@ -44,6 +44,7 @@ struct Coming2KzApp: App {
     @StateObject var settingsViewModel = SettingsViewModel()
     @StateObject var contactsViewModel = ContactsViewModel()
     @StateObject var chatViewModel = ChatViewModel()
+    @StateObject var routerManager = NavigationRouter()
 
     var body: some Scene {
         WindowGroup {
@@ -52,6 +53,7 @@ struct Coming2KzApp: App {
             .environmentObject(contactsViewModel)
             .environmentObject(chatViewModel)
             .environmentObject(settingsViewModel)
+            .environmentObject(routerManager)
         }
     }
 }

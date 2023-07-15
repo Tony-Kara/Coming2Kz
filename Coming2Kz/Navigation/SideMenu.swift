@@ -10,6 +10,7 @@ import RiveRuntime
 struct SideMenu: View {
   @State var selectedMenu: SelectedMenu = .home
   @State var isDarkMode = false
+  @Binding var isOpen: Bool
     var body: some View {
         VStack(alignment: .leading){
             HStack {
@@ -43,7 +44,7 @@ struct SideMenu: View {
               .frame(height:1)
               .opacity(0.1)
               .padding(.horizontal)
-            MenuRow(item: item, selectedMenu: $selectedMenu)
+            MenuRow(item: item, selectedMenu: $selectedMenu, isOpen: $isOpen)
           }
         }
          Spacer()
@@ -59,7 +60,7 @@ struct SideMenu: View {
 
 struct SideMenu_Previews: PreviewProvider {
     static var previews: some View {
-        SideMenu()
+        SideMenu(isOpen: .constant(false))
     }
 }
 

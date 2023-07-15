@@ -11,6 +11,7 @@ import RiveRuntime
 struct RootView: View {
   @AppStorage("selectedTab") var selectedTab: Tab = .chat
   @EnvironmentObject var rootModel: RootModel
+  @EnvironmentObject var routerManager: NavigationRouter
   @State var isOpen = true
   @State var show = false
   @State var OnChatAppear = false
@@ -18,10 +19,10 @@ struct RootView: View {
   
   
   var body: some View {
-    NavigationView {
+      NavigationStack(path: $routerManager.routes) {
       ZStack {
         Color("Background 2").ignoresSafeArea()
-        SideMenu()
+          SideMenu(isOpen: $isOpen)
           .opacity(isOpen ? 1 : 0)
           .offset(x: isOpen ? 0 : -300)
           .rotation3DEffect(.degrees(isOpen ? 0 : 30), axis: (x: 0, y: 1, z: 0), perspective: 1)
@@ -115,9 +116,9 @@ struct RootView: View {
               button.setInput("isOpen", value: isOpen)
               withAnimation(.spring(response: 0.5, dampingFraction: 0.7)) {
                 isOpen.toggle()
-              
+                  
               }
-              print("Hello")
+              
             }, label: {
                         button.view()
                           .frame(width: 44, height: 44)
@@ -135,6 +136,7 @@ struct RootView: View {
               
           }
       }
+      .navigationDestination(for: Route.self) { $0 }
       
     }
    
@@ -144,6 +146,8 @@ struct RootView: View {
 struct RootView_Previews: PreviewProvider {
   static var previews: some View {
     RootView()
+          .environmentObject(RootModel())
+          .environmentObject(NavigationRouter())
   }
 }
 
